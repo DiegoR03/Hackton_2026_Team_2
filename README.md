@@ -1,4 +1,4 @@
-# Hackton_2026_Team_2
+# Hackathon - The Gravitational Fours
 <img width="2000" height="2000" alt="Gravitational Fours(3)" src="https://github.com/user-attachments/assets/289bf19e-d8d9-478a-adfe-21a65637a10f" />
 
 
