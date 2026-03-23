@@ -30,14 +30,15 @@ h1{
     font-family: SpaceMonoBold;
 }
 
-h2, p{
+h2{
     margin-top: 0;
     font-family: SpaceMonoRegular;
     text-transform: uppercase;
 }
 
 h2{
-    color: #EB5D34
+    color: #EB5D34;
+    font-size: 20px;
 }
 
 span {
@@ -48,9 +49,24 @@ span {
 p {
     margin-left: 10rem;
     margin-right: 10rem;
+    font-family: SpaceMonoRegular;
 }
 
 .pageTitle{
     display: flex;
     flex-direction: column-reverse;
+}
+
+@media (max-width: 768px) {
+    .blackhole-container {
+        width: 120vw; /* Maak hem groter op mobiel zodat hij het scherm vult */
+        right: -7rem;
+        margin-top: -5rem;
+        transform: scale(1.6);
+    }
+
+    p {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 }
