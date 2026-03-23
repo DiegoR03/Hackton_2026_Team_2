@@ -1,1 +1,56 @@
+:root {
+    --text-color: white;
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: RobotoVariable;
+    src: url('../fonts/Roboto-VariableFont');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoBold;
+    src: url('../fonts/SpaceMono-Bold.ttf');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoRegular;
+    src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
 /* styling only for the index.html */
+h1, h2, p {
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-family: SpaceMonoBold;
+}
+
+h2, p{
+    margin-top: 0;
+    font-family: SpaceMonoRegular;
+    text-transform: uppercase;
+}
+
+h2{
+    color: #EB5D34
+}
+
+span {
+    margin: -10px;
+    font-size: 50px;
+}
+
+p {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.pageTitle{
+    display: flex;
+    flex-direction: column-reverse;
+}
