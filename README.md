@@ -1,5 +1,6 @@
 # Hackton_2026_Team_2
-<img width="2000" height="2000" alt="Gravitational Fours" src="https://github.com/user-attachments/assets/09ac020c-af28-4615-871b-ec044c7a67af" />
+<img width="2000" height="2000" alt="Gravitational Fours(2)" src="https://github.com/user-attachments/assets/79fe23ac-9cd7-4f48-a93c-68e3a91efd66" />
+
 
 
 ## Team
