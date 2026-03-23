@@ -1,4 +1,6 @@
 # Hackton_2026_Team_2
+<img width="2000" height="2000" alt="Gravitational Fours" src="https://github.com/user-attachments/assets/09ac020c-af28-4615-871b-ec044c7a67af" />
+
 
 ## Team
 Jacco, Maja, Diego, Lynn
