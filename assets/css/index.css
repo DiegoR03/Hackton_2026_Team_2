@@ -1,4 +1,3 @@
-
 :root {
     --text-color: white;
 }
@@ -26,50 +25,103 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: #181932;
     overflow-x: hidden;
     width: 100%;
 }
 
-section{
+section {
     min-height: 100vh;
 }
 
-section:nth-of-type(2) {
-    padding: 1rem;
-}
-
 /* Typografie */
-h1, h2, p {
+h1,
+h2,
+p {
     text-align: center;
     color: white;
 }
 
-h1{
+h1 {
     font-family: SpaceMonoBold;
 }
 
-h2{
+h2 {
     margin-top: 0;
     font-family: SpaceMonoRegular;
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     color: #EB5D34;
     font-size: 20px;
 }
 
 .pageTitle span {
     margin: -10px;
-    font-size: 50px;
-}
+    font-size: 1.5em;
+    display: inline-block;
+    animation-name: spaghettify;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root);
 
-p {
-    margin-left: 10rem;
-    margin-right: 10rem;
-    font-family: SpaceMonoRegular;
+    &:nth-child(1) {
+        animation-range: entry 0% exit 7%;
+    }
+
+    &:nth-child(2) {
+        animation-range: entry 1% exit 8%;
+    }
+
+    &:nth-child(3) {
+        animation-range: entry 2% exit 9%;
+    }
+
+    &:nth-child(4) {
+        animation-range: entry 3% exit 10%;
+    }
+
+    &:nth-child(5) {
+        animation-range: entry 4% exit 11%;
+    }
+
+    &:nth-child(6) {
+        animation-range: entry 5% exit 12%;
+    }
+
+    &:nth-child(7) {
+        animation-range: entry 6% exit 13%;
+    }
+
+    &:nth-child(8) {
+        animation-range: entry 7% exit 14%;
+    }
+
+    &:nth-child(9) {
+        animation-range: entry 8% exit 15%;
+    }
+
+    &:nth-child(10) {
+        animation-range: entry 9% exit 16%;
+    }
+
+    &:nth-child(11) {
+        animation-range: entry 10% exit 17%;
+    }
+
+    &:nth-child(12) {
+        animation-range: entry 11% exit 18%;
+    }
+
+    &:nth-child(13) {
+        animation-range: entry 12% exit 19%;
+    }
+
+    &:nth-child(14) {
+        animation-range: entry 13% exit 20%;
+    }
 }
 
 /* Scroll hint */
@@ -100,7 +152,7 @@ p {
     transform: rotate(45deg);
 }
 
-.pageTitle{
+.pageTitle {
     display: flex;
     flex-direction: column-reverse;
     margin-top: -40vh;
@@ -148,21 +200,18 @@ p {
 }
 
 @media (max-width: 768px) {
-    .blackhole-container {
-        width: 120vw; /* Maak hem groter op mobiel zodat hij het scherm vult */
-        right: -7rem;
-        margin-top: -25vh;
-        transform: scale(1.6);
-    }
-
     p {
         margin-left: 5rem;
         margin-right: 5rem;
     }
 
-    .pageTitle{
+    .pageTitle {
         margin-top: -25vh;
         transition: margin-top 0.3s ease;
+
+        span {
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -171,13 +220,63 @@ p {
         transform: scale(0);
         opacity: 0;
     }
-    20%, 80% {
+
+    20%,
+    80% {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         transform: scale(0);
         opacity: 0;
     }
 }
 
+@keyframes spaghettify {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    10% {
+        transform: translateY(-50px) translateX(-85px) scale(1, 2) rotate(5deg);
+    }
+
+    40% {
+        transform: translateY(-100px) translateX(-275px) scale(1, 3);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(-300px) translateX(35px) scale(1, 0) rotate(120deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    @keyframes spaghettify {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        10% {
+            transform: translateY(-50px) translateX(-35px) scale(1, 2);
+        }
+
+        40% {
+            transform: translateY(-100px) translateX(-80px) scale(1, 3);
+            opacity: 0.2;
+        }
+
+        100% {
+            transform: translateY(-300px) translateX(35px) scale(1, 0) rotate(90deg);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
