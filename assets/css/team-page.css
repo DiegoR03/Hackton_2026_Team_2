@@ -1,8 +1,16 @@
 /* styling only for team page */
 
-
-
+/* body background */
+.team-bg {
+    background: linear-gradient(#181932, white);
+}
 /* Astronaut section */
+.team-astronaut {
+    height: 80vh;
+    transform: rotate(5deg);
+    animation: astronaut-float 5s infinite  alternate ease-in-out;
+}
+
 /* astronaut body */
 .team-astronaut-person, .team-astronaut-person::before, .team-astronaut-person::after,
 .team-astronaut-person *, .team-astronaut-person *::before, .team-astronaut-person *::after {
@@ -163,4 +171,44 @@
 
 .team-astronaut-leg-right {
     translate: 1rem 5rem;
+}
+
+.team-astronaut-leg-left::before  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 12rem;
+    background-color: rgb(215, 215, 215);
+    translate: -1.2rem -6rem;
+    border-radius: 1rem;
+}
+
+.team-astronaut-leg-right::before  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 12rem;
+    background-color: rgb(215, 215, 215);
+    translate: -0.2rem -6rem;
+    border-radius: 1rem;
+}
+
+
+.team-astronaut-student-info {
+    text-align: center;
+}
+
+
+/* keyframes */
+@keyframes astronaut-float {
+    0% {
+        translate: 0rem 1rem;
+    }
+    100% {
+        translate: 0rem -1rem;
+    }
 }
