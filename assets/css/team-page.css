@@ -1,28 +1,37 @@
 /* styling only for team page */
 
 /* body background */
+.team {
+    /* background: linear-gradient(#181932, white); */
+    width: 100%;
+    margin: 0;
+}
+
 .team-bg {
     background: linear-gradient(#181932, white);
-    width: 100%;
 }
 /* Astronaut section */
 .team-astronaut {
-    height: 100vh;
+    height: 130vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 10rem;
 
     ul {
         height: 100%;
         display: flex;
         align-items: center;
         overflow-x: scroll;
+        overflow-y: hidden;
         scrollbar-width: none;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
-        overscroll-behavior: contain;
+        overscroll-behavior-x: contain;
+        overscroll-behavior-y: auto;
+
         margin: 0;
         padding: 0;
     }
@@ -39,196 +48,10 @@
     }
 }
 
-/* general astronaut body styling */
-/* astronaut body */
-.team-astronaut-person, .team-astronaut-person::before, .team-astronaut-person::after,
-.team-astronaut-person *, .team-astronaut-person *::before, .team-astronaut-person *::after {
-    position: absolute;
-    content: "";
-}
-
-.team-astronaut-person {
-    top: 50%;
-    left: 50%;
-    width: 8rem;
-    height: 12rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -4rem -5rem;
-    border-radius: 1rem;
-}
-
-.team-astronaut-person::before {
-    top: 50%;
-    left: 50%;
-    width: 8rem;
-    height: 1rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -4.2rem 2rem;
-}
-
-.team-astronaut-person::after {
-    top: 50%;
-    left: 50%;
-    width: 5rem;
-    height: 3rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -2.6rem 1rem;
-    border-radius: 1rem;
-}
-
-/* astronaut head */
-.team-astronaut-person-head {
-    top: 50%;
-    left: 50%;
-    width: 10rem;
-    height: 11rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -5.2rem -15rem;
-    border-radius: 50%;
-}
-
-/* astronaut ear thingies */
-.team-astronaut-ears {
-    top: 50%;
-    left: 50%;
-    width: 14rem;
-    height: 3.5rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -7.2rem -11rem;
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-/* astronaut team faces */
-.team-astronaut-person-face {
-    top: 5%;
-    left: 5%;
-    width: 9rem;
-    height: 10rem;
-    background-color: rgb(43, 43, 119);
-    border-radius: 50%;
-}
-
-/* backpack */
-.team-astronaut-backpack {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12rem;
-    height: 9rem;
-    background-color: white;
-    border: solid 4px black;
-    border-radius: .5rem;
-    translate: -6rem -3rem;
-    z-index: -99;
-}
-
-/* arms */
-.team-astronaut-arm-left {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12rem;
-    height: 3.5rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -12.2rem 0.1rem;
-    transform: rotate(135deg);
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-.team-astronaut-arm-left::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12rem;
-    height: 2rem;
-    background-color: rgb(215, 215, 215);
-    translate: -6.2rem -1.5rem;
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-
-.team-astronaut-arm-right {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12rem;
-    height: 3.5rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: 0.2rem 0.1rem;
-    transform: rotate(-135deg);
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-.team-astronaut-arm-right::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12rem;
-    height: 2rem;
-    background-color: rgb(215, 215, 215);
-    translate: -5.9rem -1.5rem;
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-/* legs */
-.team-astronaut-leg-left, .team-astronaut-leg-right  {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3rem;
-    height: 12rem;
-    background-color: white;
-    border: solid 4px black;
-    translate: -4rem 5rem;
-    border-radius: 1rem;
-    z-index: -1;
-}
-
-.team-astronaut-leg-right {
-    translate: 1rem 5rem;
-}
-
-.team-astronaut-leg-left::before  {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1.5rem;
-    height: 12rem;
-    background-color: rgb(215, 215, 215);
-    translate: -1.2rem -6rem;
-    border-radius: 1rem;
-}
-
-.team-astronaut-leg-right::before  {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1.5rem;
-    height: 12rem;
-    background-color: rgb(215, 215, 215);
-    translate: -0.2rem -6rem;
-    border-radius: 1rem;
-}
-
-.team-astronaut-1, .team-astronaut-2 {
-    translate: 11rem -8rem;
-    animation: astronaut-float 5s infinite  alternate ease-in-out;
+/* astronaut floating animatino */
+.team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
+    translate: 11.5rem -12rem;
+    animation: astronaut-float 4s infinite  alternate ease-in-out;
 }
 
 /* Astronaut-2 */
@@ -236,27 +59,91 @@
     .team-astronaut-person-face {
         background-color: #EB5D34;
     }
+
+    .team-astronaut-person-face::before, .team-astronaut-person-face::after {
+        background-color: #f87f5d;
+    }
+}
+
+/* Astronaut-3 */
+.team-astronaut-3 {
+    .team-astronaut-person-face {
+        background-color: #34333b;
+    }
+
+    .team-astronaut-person-face::before, .team-astronaut-person-face::after {
+        background-color: #64636d;
+    }
 }
 
 /* astronaut team members info */
 .team-astronaut-student-info {
     max-width: 400px;
+    max-height: 20vh; 
     text-align: center;
-    translate: 0rem 28rem;
+    translate: 0rem 14rem;
+    margin-bottom: 2rem;
 
     > h2 {
         font-size: 3em;
         margin: 0;
+        color: white;
+        animation: astronaut-float 6s infinite  alternate ease-in-out;
     }
 
     > h3 {
         color: #EB5D34;
         text-transform: uppercase;
+        /* font-family: 'RobotoVariable'; */
     }
 
     p {
         color: black;
+        margin: 0;
     }
+}
+
+/* experts section */
+.team-sponsors {
+    img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .team-expert-summary {
+        display: none;
+    }
+
+    .team-sponsor-1-text-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5rem 1rem;
+        justify-items: start;
+
+        p {
+            margin: 0;
+            font-size: 0.8em;
+        }
+
+        .expert-function {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .expert-intro {
+            text-align: end;
+        }
+    }
+}
+
+/* expert 1 */
+.team-sponsor-1  {
+    width: 80vw;
+    min-height: 0;
+    border: solid 2px white;
+    justify-self: center;
+    padding: 1rem;
 }
 
 /* keyframes */
@@ -265,7 +152,18 @@
         transform: translateY(1rem) scale(0.8);
     }
     100% {
-        transform: translateY(-1rem) scale(0.8);
+        transform: translateY(0rem) scale(0.8);
+    }
+}
 
+/* large screeeen */
+@media (min-width: 600px) {
+    .team-astronaut-student-info {
+        translate: 0rem 15rem;
+        max-width: 600px;
+    }
+
+    .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
+        translate: 18.5rem -8rem;
     }
 }
