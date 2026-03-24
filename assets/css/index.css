@@ -244,7 +244,7 @@ h2 {
     }
 
     40% {
-        transform: translateY(-100px) translateX(-275px) scale(1, 3);
+        transform: translateY(-100px) translateX(-275px) scale(1, 3) rotate(80deg);
         opacity: 0.2;
     }
 

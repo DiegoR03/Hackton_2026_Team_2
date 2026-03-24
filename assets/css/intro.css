@@ -34,7 +34,7 @@
     }
 
     ul {
-        grid-area: left;
+        grid-area: right;
         list-style-type: disc;
         list-style-position: inside;
     }
@@ -48,7 +48,9 @@
     }
 
     li::marker{
-        color: #D53F15;
+        color: #15b5d5;
+        content: "\2726";
+        font-size: 1.5rem;
     }
 
     ul li{
@@ -74,7 +76,7 @@
     }
 
     div {
-        grid-area: right;
+        grid-area: left;
     }
 }
 
