@@ -1,1 +1,178 @@
 /* styling only for the index.html */
+
+/* ********************* */
+/* MARK: rotating satellite
+/* ********************* */
+@property --bonus-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+
+}
+
+#satellite-rotation {
+    --earth-width: clamp(10rem, 40vw, 20rem);
+    --satellite-width: calc(var(--earth-width) / 5);
+    --radius: var(--earth-width);
+    
+
+    position: relative;
+    width: 100vw;
+    height: max-content;
+    background-color: var(--color-background);
+    display: grid;
+    place-items: center;
+    align-items: center;
+
+    #earth-container {
+        height: calc(var(--earth-width)*2.5);
+        position: relative;
+        display: grid;
+        place-items: center;
+    }
+
+    #earth, #satellite {
+        aspect-ratio: 1;
+        border-radius: 99em;
+    }
+
+    #earth {
+        position: relative;
+        width: var(--earth-width);
+        display: grid;
+        place-items: center;
+        background: url("../images/world-map.png"),
+                    linear-gradient(var(--color-accent-blue), green, var(--color-accent-blue));
+        
+        background-size: 150%, cover; 
+        background-repeat: repeat-x, no-repeat;
+        background-position: center, center;
+        transform: rotate(-10deg);
+        box-shadow: 0px 0px 40px 5px rgb(255, 237, 173);
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: move-background 10s linear infinite;
+        }
+
+        #satellite {
+            display: grid;
+            place-items: center;
+
+            margin: 0;
+            transform: translate(calc(sin(360deg + var(--bonus-angle)) * var(--radius)),
+            calc(cos(360deg + var(--bonus-angle)) * var(--radius)));
+            
+            position: absolute;
+            width: var(--satellite-width);
+            
+            background: radial-gradient(circle,
+                                        white 0%,
+                                        white 20%,
+                                        transparent 70%);
+
+            @media (prefers-reduced-motion: no-preference) {
+                animation-timeline: --satellite-info-container;
+                animation-name: orbit;
+                animation-range: entry -10% entry 60rem;
+                animation-fill-mode: both;
+                animation-timing-function: ease-out;
+            }
+
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+}
+
+@keyframes orbit {
+    0% {
+        --bonus-angle: 0deg;
+    }
+    100%{
+        --bonus-angle: 710deg;
+    }
+}
+
+@keyframes move-background {
+    0% {
+        background-position: 0% 50%, center;
+    }
+    100% {
+        background-position: 300% 50%, center;
+    }
+}
+
+
+/* ********** */
+/* MARK: transition satellite
+/* ********** */
+
+@property --satellite-position-x {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
+
+#satellite-rotation {
+    article {
+        
+        
+        height: 150vh;
+        color: white;
+    }
+
+    #earth {
+        view-timeline-name: --satellite-info-container;
+        view-timeline-axis: block;
+
+        .transform-container {
+            position: absolute;
+
+            @media (prefers-reduced-motion: no-preference) {
+                animation-timeline: --satellite-info-container;
+                animation-name: move-into-article;
+                animation-range: exit 30% exit 30rem;
+                animation-fill-mode: both;
+                animation-timing-function: ease-out;
+                
+            }
+
+        }
+    }
+
+    
+
+}
+
+@keyframes move-into-article {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(var(--satellite-position-x), 50vh) scale(400%);
+    }
+}
+
+@media (max-width: 470px) {
+    :root {
+        --satellite-position-x: -15vw;
+    }
+}
+
+@media (min-width: 471px) {
+    :root {
+        --satellite-position-x: 20vw;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        --satellite-position-x: 25vw;
+    }
+}
+
+
