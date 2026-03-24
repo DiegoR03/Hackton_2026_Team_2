@@ -23,4 +23,4 @@ function createStar() {
     });
 }
 
-setInterval(createStar, 500);
+setInterval(createStar, 1000);
