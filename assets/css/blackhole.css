@@ -79,7 +79,7 @@
 
 .ring2detail,
 .ringdetail {
-    background-image: url('/assets/img/RingDetail.jpeg');
+    background-image: url('../img/RingDetail.jpeg');
     border-radius: 100%;
     background-size: contain;
     --mask: radial-gradient(circle,
