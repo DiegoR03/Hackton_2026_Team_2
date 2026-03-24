@@ -1,25 +1,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
     
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="">Onderzoeksvragen</a>
-    <a href="">Pijlers</a>
-    <a href="">Missies</a>
-    <a href="">Over ons</a>
-    <a href="">Contact</a>
-    <a href="">Zoeken</a>
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- logo -->
+        <a href="/" class="nav-logo">
+            <img src="https://www.sron.nl/wp-content/uploads/2025/01/SRON_Small_White-1024x319.webp" 
+                alt="SRON logo" 
+                srcset="https://www.sron.nl/wp-content/uploads/2025/01/SRON_Small_White-1024x319.webp 1024w, 
+                        https://www.sron.nl/wp-content/uploads/2025/01/SRON_Small_White-300x93.webp 300w, 
+                        https://www.sron.nl/wp-content/uploads/2025/01/SRON_Small_White-768x239.webp 768w, 
+                        https://www.sron.nl/wp-content/uploads/2025/01/SRON_Small_White.webp 1515w" 
+                sizes="(max-width: 1024px) 100vw, 1024px">
+        </a>
 
-    <!-- logo -->
-    
-    <!-- nl > en -->
-    <div>
-        <span>NL</span>
-        <span>EN</span>
+        <!-- hamburger toggle for mobile -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <!-- navigation links -->
+        <ul class="nav-links">
+            <li><a href="#onderzoeksvragen" class="nav-link">Onderzoeksvragen</a></li>
+            <li><a href="#pijlers" class="nav-link">Pijlers</a></li>
+            <li><a href="#missies" class="nav-link">Missies</a></li>
+            <li><a href="#over-ons" class="nav-link">Over ons</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- action area (choose language & search) -->
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                <span class="lang active">NL</span>
+                <span class="separator">|</span>
+                <span class="lang">EN</span>
+            </div>
+            <button class="search-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
     </div>
 </nav>
+
