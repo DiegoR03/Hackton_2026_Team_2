@@ -20,14 +20,26 @@
     src: url('../fonts/SpaceMono-Regular.ttf');
 }
 
+/* Body elementen */
 html {
     scroll-behavior: smooth;
 }
 
 body{
     background-color: #181932;
+    overflow-x: hidden;
+    width: 100%;
 }
 
+section{
+    min-height: 100vh;
+}
+
+section:nth-of-type(2) {
+    padding: 1rem;
+}
+
+/* Typografie */
 h1, h2, p {
     text-align: center;
     color: white;
@@ -59,7 +71,8 @@ p {
     font-family: SpaceMonoRegular;
 }
 
-.scroll-hint {
+/* Scroll hint */
+.moreinfo-button {
     position: absolute;
     bottom: 36px;
     display: flex;
@@ -69,15 +82,16 @@ p {
     font-family: SpaceMonoBold;
     font-size: 0.7rem;
     text-transform: uppercase;
-    color: #ffffff55;
+    color: #ffffff99;
+    z-index: 1;
 }
 
-.scroll-hint span {
+.moreinfo-button span {
     font-size: 15px;
     margin-bottom: 0.5rem;
 }
 
-.scroll-hint .arrow {
+.moreinfo-button .arrow {
     width: 18px;
     height: 18px;
     border-right: 1px solid #EB5D34;
@@ -88,8 +102,10 @@ p {
 .pageTitle{
     display: flex;
     flex-direction: column-reverse;
-    margin-top: -10rem;
+    margin-top: -40vh;
     transition: margin-top 0.3s ease;
+    z-index: 1;
+    position: relative;
 }
 
 /* Stars and svg */
@@ -134,7 +150,7 @@ p {
     .blackhole-container {
         width: 120vw; /* Maak hem groter op mobiel zodat hij het scherm vult */
         right: -7rem;
-        margin-top: -5rem;
+        margin-top: -25vh;
         transform: scale(1.6);
     }
 
@@ -144,7 +160,7 @@ p {
     }
 
     .pageTitle{
-        margin-top: -5rem;
+        margin-top: -25vh;
         transition: margin-top 0.3s ease;
     }
 }

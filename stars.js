@@ -13,7 +13,6 @@ function createStar() {
         star.style.left = `${Math.random() * container.clientWidth}px`;
         star.style.top = `${Math.random() * container.clientHeight}px`;
         star.style.animation = `twinkle ${duration}s ease-in-out infinite`;
-
         star.style.animation = `twinkle ${duration}s ease-in-out forwards`;
 
         container.appendChild(star);
