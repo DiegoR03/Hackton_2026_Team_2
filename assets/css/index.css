@@ -1,1 +1,183 @@
-/* styling only for the index.html */
+
+:root {
+    --text-color: white;
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: RobotoVariable;
+    src: url('../fonts/Roboto-VariableFont');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoBold;
+    src: url('../fonts/SpaceMono-Bold.ttf');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoRegular;
+    src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
+/* Body elementen */
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #181932;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+section{
+    min-height: 100vh;
+}
+
+section:nth-of-type(2) {
+    padding: 1rem;
+}
+
+/* Typografie */
+h1, h2, p {
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-family: SpaceMonoBold;
+}
+
+h2{
+    margin-top: 0;
+    font-family: SpaceMonoRegular;
+    text-transform: uppercase;
+}
+
+h2{
+    color: #EB5D34;
+    font-size: 20px;
+}
+
+span {
+    margin: -10px;
+    font-size: 50px;
+}
+
+p {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font-family: SpaceMonoRegular;
+}
+
+/* Scroll hint */
+.moreinfo-button {
+    position: absolute;
+    bottom: 36px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: SpaceMonoBold;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #ffffff99;
+    z-index: 1;
+}
+
+.moreinfo-button span {
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.moreinfo-button .arrow {
+    width: 18px;
+    height: 18px;
+    border-right: 1px solid #EB5D34;
+    border-bottom: 1px solid #EB5D34;
+    transform: rotate(45deg);
+}
+
+.pageTitle{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: -40vh;
+    transition: margin-top 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+/* Stars and svg */
+.backgroundStar::after,
+.backgroundStar::before {
+    position: absolute;
+    top: -0.5em;
+    content: "\2726";
+}
+
+.backgroundStar::after {
+    position: relative;
+    background: linear-gradient(135deg, rgb(249, 255, 204) 20%, rgb(255, 255, 255) 70%);
+    background-clip: text;
+    color: transparent;
+}
+
+.backgroundStar::before {
+    color: transparent;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.backgroundStar {
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    left: -0.8em;
+    top: 0.3em;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.stars {
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .blackhole-container {
+        width: 120vw; /* Maak hem groter op mobiel zodat hij het scherm vult */
+        right: -7rem;
+        margin-top: -25vh;
+        transform: scale(1.6);
+    }
+
+    p {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .pageTitle{
+        margin-top: -25vh;
+        transition: margin-top 0.3s ease;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
