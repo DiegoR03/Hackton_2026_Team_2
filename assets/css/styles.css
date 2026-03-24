@@ -22,11 +22,10 @@
 
 
 
-/* /// */
-/* nav */
-/* /// */
-
+/* ////////////// */
 /* root variables */
+/* ////////////// */
+
 :root {
     --bg-dark: #0a0b1e;
     --navy-blue: #181932;
@@ -53,9 +52,11 @@ body {
     line-height: 1.6;
 }
 
-/* /// */
-/* nav */
-/* /// */
+
+
+/* /////// */
+/* top nav */
+/* /////// */
 
 .navbar {
     position: fixed;
