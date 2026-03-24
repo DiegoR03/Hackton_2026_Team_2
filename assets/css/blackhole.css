@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Met behulp van de codepen: https://codepen.io/cas-van-den-elzen/pen/MWLNEoz?editors=1100 */
+.blackhole-mask {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+    clip-path: inset(0);
+    z-index: 1;
+}
+
+.blackhole-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    margin-top: -5rem;
+}
+
+
+.shape {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: black;
+    z-index: 2;
+    box-shadow: 0px 0px 2px 0px rgb(255, 208, 177),
+        0px 0px 6px rgba(255, 255, 255),
+        0px 0px 2px rgb(255, 208, 177) inset,
+        0px 0px 3px 0px rgb(255, 255, 255) inset, 0px 0px 2px 8px rgb(0, 0, 0),
+        0px 0px 220px 10px rgba(255, 149, 0, 0.6), 0px 0px 50px 5px white;
+}
+
+.ring,
+.ring2,
+.ringdetail,
+.ring2detail,
+.ring2gloom {
+    position: absolute;
+}
+
+.ring,
+.ring2 {
+    border-radius: 100%;
+    background: radial-gradient(circle,
+            rgba(242, 226, 217, 0) 53%,
+            rgb(255, 255, 255) 54%,
+            rgba(246, 173, 141, 1) 55%,
+            rgba(247, 165, 125, 0.9) 59%,
+            rgba(252, 146, 66, 1) 63%,
+            rgba(254, 56, 49, 0.74) 73%,
+            rgba(196, 7, 8, 0.5) 83%,
+            rgba(136, 28, 13, 0.135) 97%);
+}
+
+.ring {
+    width: 300px;
+    height: 350px;
+    filter: blur(33px);
+}
+
+.ring2 {
+    width: 800px;
+    height: 800px;
+    transform: rotateX(84deg) rotateY(-25deg);
+    filter: blur(193px);
+}
+
+.ring2detail,
+.ringdetail {
+    background-image: url('../img/RingDetail.jpeg');
+    border-radius: 100%;
+    background-size: contain;
+    --mask: radial-gradient(circle,
+            rgb(255, 208, 0) 0,
+            rgb(250, 233, 0) 20%,
+            rgba(227, 151, 0, 0),
+            rgba(246, 143, 0, 0)) 100% repeat-x;
+    mask: var(--mask);
+    -webkit-mask: var(--mask);
+}
+
+.ringdetail {
+    width: 1500px;
+    height: 1500px;
+    transform: rotateX(84deg) rotateY(-25deg);
+    opacity: 0.5;
+    mix-blend-mode: soft-light;
+    animation: rotateRing 60s linear infinite;
+}
+
+.ring2detail {
+    width: 400px;
+    height: 400px;
+    animation: rotateRing2 20s linear infinite;
+}
+
+.ring2gloom {
+    width: 1200px;
+    height: 1200px;
+    border-radius: 100%;
+    transform: rotateX(85deg) rotateY(-25deg);
+    background: radial-gradient(circle,
+            #18193200 14%,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 167, 60, 0.4),
+            #ffffff06 70%,
+            #18193200);
+}
+
+@keyframes rotateRing {
+    0% {
+        transform: rotateX(84deg) rotateY(-25deg) rotate(0);
+    }
+
+    100% {
+        transform: rotateX(84deg) rotateY(-25deg) rotate(360deg);
+    }
+}
+
+@keyframes rotateRing2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .blackhole-mask {
+        height: 40rem;
+    }
+
+    .blackhole-container {
+        transform: scale(2);
+        margin-top: -15rem;
+    }
+}

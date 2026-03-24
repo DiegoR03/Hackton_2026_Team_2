@@ -6,38 +6,78 @@
     <title>Nebula Xplorer</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/blackhole.css">
+    <script src="stars.js" defer></script>
+    <link rel="stylesheet" href="assets/css/maja.css">
 </head>
 <body>
     <header>
         <!-- the black hole goes here -->
-        <!-- title -->
-        <h1>NEBULA Xplorer</h1>
-        <!-- this gets sucked in -->
-        <h2 aria-hidden="true">
-            <span>N</span>
-            <span>E</span>
-            <span>B</span>
-            <span>U</span>
-            <span>L</span>
-            <span>A</span>
-    
-            <span>X</span>
-            <span>p</span>
-            <span>l</span>
-            <span>o</span>
-            <span>r</span>
-            <span>e</span>
-            <span>r</span>
-        </h2>
     </header>
     <main>
-        <!-- about nebula -->
-        <section>
-
+        <!-- Title screen -->
+        <section class="stars">
+            <div class="blackhole-mask">
+                <div class="blackhole-container">
+                    <div class="shape"></div>
+                    <div class="ring"></div>
+                    <div class="ring2"></div>
+                    <div class="ring2gloom"></div>
+                    <div class="ringdetail"></div>
+                    <div class="ring2detail"></div>
+                </div>
+            </div>
+            <!-- title -->
+            <!-- this gets sucked in -->
+             <div class="pageTitle">
+                <h1 aria-hidden="true">
+                    <span>N</span>
+                    <span>E</span>
+                    <span>B</span>
+                    <span>U</span>
+                    <span>L</span>
+                    <span>A</span>
+                    <span>&nbsp</span>
+                    <span>X</span>
+                    <span>p</span>
+                    <span>l</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>e</span>
+                    <span>r</span>
+                </h1>
+                <h2>Mission In development</h2>
+             </div>
+             <a href="#info" class="moreinfo-button">
+                <span>More about the Mission</span>
+                <div class="arrow"></div>
+            </a>
         </section>
 
+        <!-- Info about nebula -->
+         <section id="info">
+            <p>NEBULA – Xplorer staat voor “Netherlands Educational Satellite for Exploration of Binary-Linked Astrophysics – X-ray Observer”. Ongeveer vierhonderd studenten helpen SRON, veertien Nederlandse onderwijsinstellingen en vele industriële partners om deze ruimtemissie te ontwikkelen van begin tot eind, onder leiding van wetenschappers en ingenieurs. De missie heeft twee doelen. Het wetenschappelijke doel is  beter begrijpen hoe een zwart gat materiaal afsnoept van een ster die er  omheen draait. Het educatieve doel is dat studenten van Nederlandse onderwijsinstellingen van binnenuit meemaken hoe je een ruimtemissie van begin tot eind opbouwt. SRON heeft de leiding over NEBULA – Xplorer, waarmee het bijdraagt aan een nieuwe generatie wetenschappers, ontwerpers en technici voor het Nederlandse ruimteonderzoek.</p>
+         </section>
+
         <!-- satellite -->
-        <section>
+        <!-- <a href="https://www.vecteezy.com/free-png/world-map-transparent-background">World Map Transparent Background PNGs by Vecteezy</a> -->
+        <section id="satellite-rotation">
+            <div id="earth-container">
+                
+                <div id="earth">
+                    <figure id="satellite">
+                        <div class="transform-container" >
+                            <img src="assets/images/satellite-design.png"></img>
+                        </div>
+                    </figure>
+                </div>
+                
+            </div>
+
+            <article>
+                <h2>Step 1</h2>
+                <p>Lorem ipsum</p>
+            </article>
 
         </section>
 
