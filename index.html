@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="stars.js" defer></script>
     <link rel="stylesheet" href="assets/css/maja.css">
 </head>
+
 <body>
     <header>
         <!-- the black hole goes here -->
@@ -29,7 +31,7 @@
             </div>
             <!-- title -->
             <!-- this gets sucked in -->
-             <div class="pageTitle">
+            <div class="pageTitle">
                 <h1 aria-hidden="true">
                     <span>N</span>
                     <span>E</span>
@@ -47,31 +49,39 @@
                     <span>r</span>
                 </h1>
                 <h2>Mission In development</h2>
-             </div>
-             <a href="#info" class="moreinfo-button">
+            </div>
+            <a href="#info" class="moreinfo-button">
                 <span>More about the Mission</span>
                 <div class="arrow"></div>
             </a>
         </section>
 
         <!-- Info about nebula -->
-         <section id="info">
-            <p>NEBULA – Xplorer staat voor “Netherlands Educational Satellite for Exploration of Binary-Linked Astrophysics – X-ray Observer”. Ongeveer vierhonderd studenten helpen SRON, veertien Nederlandse onderwijsinstellingen en vele industriële partners om deze ruimtemissie te ontwikkelen van begin tot eind, onder leiding van wetenschappers en ingenieurs. De missie heeft twee doelen. Het wetenschappelijke doel is  beter begrijpen hoe een zwart gat materiaal afsnoept van een ster die er  omheen draait. Het educatieve doel is dat studenten van Nederlandse onderwijsinstellingen van binnenuit meemaken hoe je een ruimtemissie van begin tot eind opbouwt. SRON heeft de leiding over NEBULA – Xplorer, waarmee het bijdraagt aan een nieuwe generatie wetenschappers, ontwerpers en technici voor het Nederlandse ruimteonderzoek.</p>
-         </section>
+        <section id="info">
+            <p>NEBULA – Xplorer staat voor “Netherlands Educational Satellite for Exploration of Binary-Linked
+                Astrophysics – X-ray Observer”. Ongeveer vierhonderd studenten helpen SRON, veertien Nederlandse
+                onderwijsinstellingen en vele industriële partners om deze ruimtemissie te ontwikkelen van begin tot
+                eind, onder leiding van wetenschappers en ingenieurs. De missie heeft twee doelen. Het wetenschappelijke
+                doel is  beter begrijpen hoe een zwart gat materiaal afsnoept van een ster die er  omheen draait. Het
+                educatieve doel is dat studenten van Nederlandse onderwijsinstellingen van binnenuit meemaken hoe je een
+                ruimtemissie van begin tot eind opbouwt. SRON heeft de leiding over NEBULA – Xplorer, waarmee het
+                bijdraagt aan een nieuwe generatie wetenschappers, ontwerpers en technici voor het
+                Nederlandse ruimteonderzoek.</p>
+        </section>
 
         <!-- satellite -->
         <!-- <a href="https://www.vecteezy.com/free-png/world-map-transparent-background">World Map Transparent Background PNGs by Vecteezy</a> -->
         <section id="satellite-rotation">
             <div id="earth-container">
-                
+
                 <div id="earth">
                     <figure id="satellite">
-                        <div class="transform-container" >
+                        <div class="transform-container">
                             <img src="assets/images/satellite-design.png"></img>
                         </div>
                     </figure>
                 </div>
-                
+
             </div>
 
             <article>
@@ -81,9 +91,116 @@
 
         </section>
 
-        <!-- steps until launch -->
-        <section>
+        <!-- steps before launch -->
+        <section class="steps-outer-container">
+            <div class="steps-header">
+                <h2>STEPS BEFORE LAUNCH</h2>
+                <p class="steps-intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
 
+            <div class="steps-sticky-wrapper">
+
+
+                <!-- desktop -->
+                <div class="desktop-vertical-path">
+                    <svg class="desktop-path-svg" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="desktop-orbit-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#EB5D34" />
+                                <stop offset="100%" stop-color="#4A90E2" />
+                            </linearGradient>
+                        </defs>
+                        <!-- main path curve -->
+                        <path id="desktop-orbit-path" d="M0,0 Q200,300 0,600" stroke="url(#desktop-orbit-gradient)"
+                            stroke-width="6" fill="none" />
+
+                        <!-- static nodes and connecting lines -->
+                        <g class="path-node" transform="translate(43.5, 75)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(93.5, 225)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(93.5, 375)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(43.5, 525)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <!-- moving Star -->
+                        <g id="desktop-star" style="offset-path: path('M0,0 Q200,300 0,600'); offset-distance: 0%;">
+                            <circle r="6" fill="white" />
+                            <circle r="14" fill="#EB5D34" opacity="0.4" class="pulse-glow-svg" />
+                            <line x1="-20" y1="0" x2="20" y2="0" stroke="white" stroke-width="0.8" opacity="0.6" />
+                            <line x1="0" y1="-20" x2="0" y2="20" stroke="white" stroke-width="0.8" opacity="0.6" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- mobile -->
+                <div class="orbit-container mobile-orbit">
+                    <svg class="orbit-svg" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="orbit-path" d="M20,100 Q200,20 380,100" stroke="url(#orbit-gradient)" stroke-width="2"
+                            fill="none" />
+                        <defs>
+                            <linearGradient id="orbit-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#4A90E2" />
+                                <stop offset="100%" stop-color="#EB5D34" />
+                            </linearGradient>
+                        </defs>
+                        <!-- star group inside svg -->
+                        <g id="star-icon" style="offset-path: path('M20,100 Q200,20 380,100'); offset-distance: 0%;">
+                            <circle r="4" fill="white" />
+                            <circle r="10" fill="white" opacity="0.2" class="pulse-glow-svg" />
+                            <line x1="-15" y1="0" x2="15" y2="0" stroke="white" stroke-width="0.5" opacity="0.5" />
+                            <line x1="0" y1="-15" x2="0" y2="15" stroke="white" stroke-width="0.5" opacity="0.5" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="steps-display">
+                    <div class="step-content active" data-step="1">
+                        <h3>Reviews en Ontwerpbevestiging</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="step-content" data-step="2">
+                        <h3>Testen en Kwalificatie</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="step-content" data-step="3">
+                        <h3>Assemblage en Integratie</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="step-content" data-step="4">
+                        <h3>Lanceringcampagne</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- scroll trigger areas -->
+            <div class="step-trigger" data-trigger="1"></div>
+            <div class="step-trigger" data-trigger="2"></div>
+            <div class="step-trigger" data-trigger="3"></div>
+            <div class="step-trigger" data-trigger="4"></div>
         </section>
 
         <!-- partnership/team -->
@@ -97,7 +214,8 @@
     <footer>
 
     </footer>
-    
+
     <script src="index.js"></script>
 </body>
+
 </html>
