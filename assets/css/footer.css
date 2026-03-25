@@ -50,6 +50,11 @@ footer {
 
     ul{
         list-style-type: none;
+        
+        li a {
+                text-decoration: underline;
+                color: white;
+            }
     }
 
     #footer-menu{
@@ -75,7 +80,7 @@ footer {
         ul{
             padding-top: 2rem;
 
-            li {
+            li{
                 display: flex;
                 align-items: center;
                 gap: 10px;
