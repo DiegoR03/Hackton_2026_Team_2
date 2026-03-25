@@ -68,6 +68,16 @@
     div {
         grid-area: left;
     }
+
+    .distortion-container {
+        grid-area: bottom;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 #info::after {
@@ -87,24 +97,19 @@
 #distortion{
     grid-area: bottom;
     padding-left: 0;
-    width: 94vw;
+    width: 100%;
+    /* https://www.w3schools.com/css/css3_object-fit.asp */
+    object-fit: contain;
 }
 
 #distortionweight {
     position: absolute;
-    top: 50rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2rem;
-    height:2rem;
-    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 1) 50%, transparent 100%);
+    width: 5rem;
+    height: 5rem;
+    background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 1) 50%, transparent 100%);
     border-radius: 50%;
-    box-shadow:
-        0 0 10px rgba(255, 255, 255, 0.9),
-        0 0 20px rgba(255, 255, 255, 0.7),
-        0 0 30px rgba(255, 255, 255, 0.5),
-        0 0 40px rgba(255, 255, 255, 0.3);
-    z-index: 3;
+    z-index: 4;
+    pointer-events: none;
 
     animation-name: gravityweight;
     animation-timing-function: ease-in-out;
@@ -115,23 +120,86 @@
 
 @keyframes gravityweight {
     0% {
-        transform: translateY(0);
+        transform: translate(0, -12vw) scale(1.8);
         opacity: 1;
     }
 
-    10% {
-        transform: translateY(-150px) translateX(85px) ;
+    2% {
+        transform: translate(-20vw, -10vw) scale(1.7);
     }
 
-    40% {
-        transform: translateY(-100px) translateX(-275px);
-        opacity: 0.2;
+    4% {
+        transform: translate(-45vw, 0vw) scale(1.6);
+    }
+
+    6% {
+        transform: translate(-22.5vw, 4vw) scale(1.6);
+    }
+
+    8% {
+        transform: translate(0, 8vw) scale(1.4);
+    }
+
+    10% {
+        transform: translate(22.5, 4vw) scale(1.4);
+    }
+
+    12% {
+        transform: translate(45vw, 0vw) scale(1.2);
+    }
+
+    14% {
+        transform: translate(22.5, -3vw) scale(1.0);
+    }
+
+    16% {
+        transform: translate(0, -6vw) scale(1.0);
+    }
+
+    18% {
+        transform: translate(-12.5vw, -4vw) scale(0.8);
+    }
+
+    20% {
+        transform: translate(-25vw, -2vw) scale(0.8);
+    }
+
+    22% {
+        transform: translate(-12.5, 1vw) scale(0.7);
+    }
+
+    24% {
+        transform: translate(0, 4vw) scale(0.7);
+    }
+
+    25% {
+        transform: translate(12.5vw, 1vw) scale(0.6);
+    }
+
+    26% {
+        transform: translate(25vw, -2vw) scale(0.6);
+    }
+
+    27% {
+        transform: translate(12.5vw, -1.5vw) scale(0.6);
+    }
+
+    28% {
+        transform: translate(0, -1vw) scale(0.5); 
+    }
+
+    29% {
+        transform: translate(0, 2vw) scale(0.5); 
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(0, 5vw) scale(0);
+        opacity: 0;
     }
 
     100% {
-        transform: translateY(-300px) translateX(35px);
         opacity: 0;
-        visibility: hidden;
     }
 }
 
