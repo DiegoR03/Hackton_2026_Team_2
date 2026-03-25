@@ -1,0 +1,207 @@
+/* general astronaut body styling */
+/* astronaut body */
+.team-astronaut-person, .team-astronaut-person::before, .team-astronaut-person::after,
+.team-astronaut-person *, .team-astronaut-person *::before, .team-astronaut-person *::after {
+    position: absolute;
+    content: "";
+}
+
+.team-astronaut-person {
+    top: 50%;
+    left: 50%;
+    width: 8rem;
+    height: 12rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -4rem -5rem;
+    border-radius: 1rem;
+}
+
+.team-astronaut-person::before {
+    top: 50%;
+    left: 50%;
+    width: 8rem;
+    height: 1rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -4.2rem 2rem;
+}
+
+.team-astronaut-person::after {
+    top: 50%;
+    left: 50%;
+    width: 5rem;
+    height: 3rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -2.6rem 1rem;
+    border-radius: 1rem;
+}
+
+/* astronaut head */
+.team-astronaut-person-head {
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    height: 11rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -5.2rem -15rem;
+    border-radius: 50%;
+}
+
+/* astronaut ear thingies */
+.team-astronaut-ears {
+    top: 50%;
+    left: 50%;
+    width: 14rem;
+    height: 3.5rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -7.2rem -11rem;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.team-astronaut-ears:before, .team-astronaut-ears:after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 14rem;
+    height: 1.5rem;
+    background-color: rgb(215, 215, 215);
+    translate: -7rem 0rem;
+    border-radius: 1rem;
+}
+
+/* astronaut team faces */
+.team-astronaut-person-face {
+    top: 5%;
+    left: 5%;
+    width: 9rem;
+    height: 10rem;
+    background-color: rgb(43, 43, 119);
+    border-radius: 50%;
+}
+
+.team-astronaut-person-face::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(82, 82, 169);
+    border-radius: 50%;
+    translate: 4.8rem 2rem;
+}
+
+.team-astronaut-person-face::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(82, 82, 169);
+    border-radius: 50%;
+    translate: 7rem 3.5rem;
+}
+
+
+/* backpack */
+.team-astronaut-backpack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 9rem;
+    background-color: white;
+    border: solid 4px black;
+    border-radius: .5rem;
+    translate: -6rem -3rem;
+    z-index: -99;
+}
+
+/* arms */
+.team-astronaut-arm-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 3.5rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -12.2rem 0.1rem;
+    transform: rotate(135deg);
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.team-astronaut-arm-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 2rem;
+    background-color: rgb(215, 215, 215);
+    translate: -6.2rem -1.5rem;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.team-astronaut-arm-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 3.5rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: 0.2rem 0.1rem;
+    transform: rotate(-135deg);
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.team-astronaut-arm-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12rem;
+    height: 2rem;
+    background-color: rgb(215, 215, 215);
+    translate: -5.9rem -1.5rem;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+/* legs */
+.team-astronaut-leg-left, .team-astronaut-leg-right  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 12rem;
+    background-color: white;
+    border: solid 4px black;
+    translate: -4rem 5rem;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.team-astronaut-leg-right {
+    translate: 1rem 5rem;
+}
+
+.team-astronaut-leg-left::before, .team-astronaut-leg-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 12rem;
+    background-color: rgb(215, 215, 215);
+    translate: -1.2rem -6rem;
+    border-radius: .3rem;
+}
+
+.team-astronaut-leg-right::before  {
+    translate: -0.2rem -6rem;
+}

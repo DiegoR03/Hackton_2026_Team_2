@@ -79,11 +79,11 @@
 
 .ring2detail,
 .ringdetail {
-    background-image: url('../img/RingDetail.jpeg');
+    background-image: url('/assets/img/RingDetail.jpeg');
     border-radius: 100%;
     background-size: contain;
     --mask: radial-gradient(circle,
-            rgb(255, 208, 0) 0,
+            rgb(255, 255, 255) 0,
             rgb(250, 233, 0) 20%,
             rgba(227, 151, 0, 0),
             rgba(246, 143, 0, 0)) 100% repeat-x;
@@ -91,7 +91,7 @@
     -webkit-mask: var(--mask);
 }
 
-.ringdetail {
+.ring2detail {
     width: 1500px;
     height: 1500px;
     transform: rotateX(84deg) rotateY(-25deg);
@@ -100,7 +100,7 @@
     animation: rotateRing 60s linear infinite;
 }
 
-.ring2detail {
+.ringdetail {
     width: 400px;
     height: 400px;
     animation: rotateRing2 20s linear infinite;
@@ -146,6 +146,8 @@
 
     .blackhole-container {
         transform: scale(2);
-        margin-top: -15rem;
+        width: 120vw;
+        right: -7rem;
+        margin-top: -25vh;
     }
 }
