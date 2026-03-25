@@ -28,7 +28,7 @@ div#earthLocaties-container {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     margin-bottom: 10rem;
 
     ul {
@@ -36,7 +36,7 @@ div#earthLocaties-container {
         display: flex;
         align-items: center;
         overflow-x: scroll;
-        overflow-y: hidden;
+        overflow-y: clip;
         scrollbar-width: none;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;

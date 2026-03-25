@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     color: white;
-    overflow: hidden;
+    overflow: clip;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
 
 #earthLocaties-container {
     position: absolute;
-    bottom: -90vw;
+    bottom: -95vw;
     width: 114vw;
     height: 114vw;
     z-index: 1;
@@ -49,8 +49,8 @@
 
 
 .connection-lines {
-    position: absolute;
-    bottom: 0;
+position: absolute;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
@@ -60,6 +60,7 @@
     svg {
         width: 100%;
         height: 100%;
+        display: block;
     }
 }
 
@@ -139,6 +140,28 @@
     transform: scale(1.05);
 }
 
+.location-marker {
+    opacity: 0;
+    animation: fadeInMarker 0.5s ease-out 2s forwards;
+}
+
+.pulse-circle {
+    fill: rgba(235, 8, 8, 0.5);
+    transform-origin: center;
+    transform-box: fill-box; 
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeInMarker {
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    70% { transform: scale(2.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
 @keyframes drawLine {
     to {
         stroke-dashoffset: 0;
@@ -148,6 +171,7 @@
 @media (max-width: 1032px) {
     #locatiesSRON {
         height: auto;
+        padding-bottom: 4rem;
     }
 
     #earthLocaties-container {
