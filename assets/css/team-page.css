@@ -7,6 +7,20 @@
     margin: 0;
 }
 
+.team-bg {
+    overflow: hidden;
+}
+
+/* THE EARTH */
+div#earthLocaties-container {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 100vw;
+    height: 100vw;
+    z-index: -1;
+}
+
 /* Astronaut section */
 .team-astronaut {
     height: 150vh;
@@ -49,7 +63,7 @@
 /* astronaut floating animatino */
 .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
     translate: 11.5rem -18rem;
-    animation: astronaut-float 4s infinite  alternate ease-in-out;
+    animation: astronaut-float 10s infinite  alternate ease-in-out;
     box-sizing:inherit;
 }
 
@@ -111,7 +125,7 @@
     border: none;
     width: 2rem;
     height: 2rem;
-    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 30% 100%, 80% 50%, 30% 0); */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 30% 100%, 80% 50%, 30% 0);
     position: absolute;
     right: 5%;
     top: 20%;
@@ -198,19 +212,22 @@ section.team-sponsors {
 /* keyframes */
 @keyframes astronaut-float {
     0% {
-        transform: translateY(1rem) scale(0.8) rotate(5deg);
+        transform: translateY(2rem) translateX(0rem) scale(0.8) rotateY(0deg) rotateX(0deg) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-2rem) translateX(1.5rem) scale(0.8) rotateY(3deg) rotateX(3deg) rotate(0deg);
     }
     100% {
-        transform: translateY(0rem) scale(0.8) rotate(15deg);
+        transform: translateY(-1rem) translateX(1.5rem) scale(0.8) rotateY(3deg) rotateX(3deg) rotate(5deg);
     }
 }
 
 /* large screeeen */
 @media (min-width: 600px) {
 
-    .team-astronaut {
-        height: 120vh;
-        margin-bottom: 0;
+    div#earthLocaties-container {
+        top: -35%;
+        left: -20%;
     }
 
     .team-astronaut-student-info {
@@ -220,4 +237,86 @@ section.team-sponsors {
     .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
         translate: 18.5rem -18rem;
     }
+}
+
+@media (min-width: 850px) {
+    div#earthLocaties-container {
+        top: -45%;
+        left: -30%;
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
+        translate: 28.5rem -15rem;
+    }
+
+    .team-astronaut-student-info {
+        max-height: 999vh;
+        text-align: left;
+        translate: -7rem 11rem;
+
+        > h2 {
+            text-align: left;
+        }
+
+        p {
+            color: white;
+            text-align: left;
+            font-size: .9em;
+            margin: 0;
+        }
+    }
+
+    .atronaut-button {
+        top: 33%;
+    }
+
+
+    /* @keyframes astronaut-float {
+        0% {
+            transform: translateY(1rem) scale(.95) rotate(0deg);
+        }
+        100% {
+            transform: translateY(0rem) scale(.95) rotate(40deg);
+        }
+    } */
+}
+
+@media (min-width: 1100px) {
+    div#earthLocaties-container {
+        top: -75%;
+        left: -25%;
+    }
+
+    .team-astronaut {
+        height: 120vh;
+    }
+
+    .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
+        translate: 35.5rem -8rem;
+    }
+
+    .team-astronaut-student-info {
+        translate: -16rem 20rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    div#earthLocaties-container {
+        top: -90%;
+        left: -25%;
+    }
+    .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
+        translate: 35.5rem -5rem;
+    }
+
+    /* @keyframes astronaut-float {
+        0% {
+            transform: translateY(1rem) scale(1) rotate(0deg);
+        }
+        100% {
+            transform: translateY(0rem) scale(1) rotate(40deg);
+        }
+    } */
 }

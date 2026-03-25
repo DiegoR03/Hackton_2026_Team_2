@@ -23,6 +23,7 @@
     width: 8rem;
     height: 1rem;
     background-color: white;
+    box-shadow: inset rgb(215, 215, 215) 0px 5px 0px;
     border: solid 4px black;
     translate: -4.2rem 2rem;
 }
@@ -32,8 +33,9 @@
     left: 50%;
     width: 5rem;
     height: 3rem;
-    background: radial-gradient(black 100%, white) 20px 12px / 50% 46% no-repeat;
+    background-color: white;
     border: solid 4px black;
+    box-shadow:inset  rgb(215, 215, 215) 5px 5px 0px;
     translate: -2.6rem 1rem;
     border-radius: 1rem;
 }
@@ -140,10 +142,11 @@
     height: 3.5rem;
     background-color: white;
     border: solid 4px black;
-    translate: -12.2rem 0.1rem;
     transform: rotate(135deg);
+    translate: -1rem -4rem;
     border-radius: 1rem;
-    z-index: -1;
+    z-index: -1;  
+    animation: astronaut-left-arm 7s infinite  alternate ease-in-out; 
 }
 
 .team-astronaut-arm-left::before {
@@ -171,6 +174,7 @@
     transform: rotate(-135deg);
     border-radius: 1rem;
     z-index: -1;
+    animation: astronaut-right-arm 4s infinite  alternate ease-in-out;  
 }
 
 .team-astronaut-arm-right::before {
@@ -218,4 +222,57 @@
 
 .team-astronaut-leg-right::before  {
     translate: -0.2rem -6rem;
+}
+
+/* keyframes */
+@keyframes astronaut-left-arm {
+    0% {
+        transform: rotate(135deg);
+        translate: -1rem -4rem;
+        transform-origin: left center;
+    }
+    100% {
+        transform: rotate(145deg);
+        translate: -1rem -3rem;
+        transform-origin: left center;
+    }
+}
+
+@keyframes astronaut-right-arm {
+    0% {
+        transform: rotate(-135deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
+    100% {
+        transform: rotate(-145deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
+}
+
+@keyframes astronaut-left-leg {
+    0% {
+        transform: rotate(-135deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
+    100% {
+        transform: rotate(-145deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
+}
+
+@keyframes astronaut-right-leg {
+    0% {
+        transform: rotate(-135deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
+    100% {
+        transform: rotate(-145deg);
+        translate: -11.5rem -4rem;
+        transform-origin: right center;
+    }
 }
