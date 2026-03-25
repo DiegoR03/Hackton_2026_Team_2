@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/blackhole.css">
+    <link rel="stylesheet" href="assets/css/locaties.css">
+    <link rel="stylesheet" href="assets/css/intro.css">
     <script src="stars.js" defer></script>
+    <script src="nebula.js" defer></script>
     <link rel="stylesheet" href="assets/css/maja.css">
 </head>
 <body>
     <header>
+        <div id="nav-placeholder"></div>
         <!-- the black hole goes here -->
     </header>
     <main>
@@ -27,6 +31,7 @@
                     <div class="ring2detail"></div>
                 </div>
             </div>
+
             <!-- title -->
             <!-- this gets sucked in -->
              <div class="pageTitle">
@@ -56,7 +61,21 @@
 
         <!-- Info about nebula -->
          <section id="info">
-            <p>NEBULA – Xplorer staat voor “Netherlands Educational Satellite for Exploration of Binary-Linked Astrophysics – X-ray Observer”. Ongeveer vierhonderd studenten helpen SRON, veertien Nederlandse onderwijsinstellingen en vele industriële partners om deze ruimtemissie te ontwikkelen van begin tot eind, onder leiding van wetenschappers en ingenieurs. De missie heeft twee doelen. Het wetenschappelijke doel is  beter begrijpen hoe een zwart gat materiaal afsnoept van een ster die er  omheen draait. Het educatieve doel is dat studenten van Nederlandse onderwijsinstellingen van binnenuit meemaken hoe je een ruimtemissie van begin tot eind opbouwt. SRON heeft de leiding over NEBULA – Xplorer, waarmee het bijdraagt aan een nieuwe generatie wetenschappers, ontwerpers en technici voor het Nederlandse ruimteonderzoek.</p>
+            <h2>About NEBULA - Xplorer</h2>
+            <ul>
+                <li>400~ Studenten</li>
+                <li>14 Nederlandse onderwijsinstellingen</li>
+                <li>Vele <a href="#partners">andere industriële partners</a></li>
+                <li>Planning gestart in 2024</li>
+                <li>Lancering in 2029</li>
+            </ul>
+            <div>
+                <p>NEBULA – Xplorer stands for “Netherlands Educational Satellite for Exploration of Binary-Linked Astrophysics – X-ray Observer”. About 400 students will join SRON, 14 Dutch educational institutions and many industrial partners in developing this space mission from start to finish, led by scientists and engineers. The mission has two goals. The scientific goal is to better understand how a black hole captures material from a companion star. The educational goal is for students from Dutch educational institutions to experience first hand how to build a space mission from the ground up. SRON is leading the NEBULA – Xplorer mission, contributing to a new generation of scientists, designers and technicians for Dutch space research.</p>
+            </div>
+            <div class="distortion-container">
+            <img id="distortion" src="/assets/img/Space time distortion.png">
+            <span id="distortionweight"></span>
+        </div>
          </section>
 
         <!-- satellite -->
@@ -204,8 +223,49 @@
         </section>
 
         <!-- partnership/team -->
-        <section>
-
+        <section id="locatiesSRON">
+            <div id="locatie-titel">
+                <h2>Onze Locaties</h2>
+                <p>Wij werken vanuit twee innovatieve hotspots in Nederland:</p>
+            </div>
+        
+            <div class="connection-lines">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M 50,70 C 40,60 20,50 20,30" class="line-path line-leiden"></path>
+                    <path d="M 50,70 C 60,60 80,50 80,30" class="line-path line-groningen"></path>
+                </svg>
+            </div>
+        
+            <div id="locatie-leiden" class="location-card">
+                <div class="card-content">
+                    <p class="city-name">Leiden</p>
+                    <div class="sub-text">
+                        <p>Niels Bohrweg 4</p>
+                        <p>2333 CA Leiden</p>
+                        <p>The Netherlands</p>
+                        <p>+31 (0)88 777 56 00</p>
+                    </div>
+                </div>
+                <img src="/assets/img/SRON-Leiden.png" alt="SRON Leiden">
+            </div>
+        
+            <div id="locatie-groningen" class="location-card">
+                <div class="card-content">
+                    <p class="city-name">Groningen</p>
+                    <div class="sub-text">
+                        <p>Landleven 12</p>
+                        <p>9747 AD Groningen</p>
+                        <p>The Netherlands</p>
+                        <p>+31 (0)50 363 40 74</p>
+                    </div>
+                </div>
+                <img src="/assets/img/SRON-Groningen.png" alt="SRON Groningen">
+            </div>
+        
+            <div id="earthLocaties-container">
+                <img id="earthLocaties" src="/assets/img/EarthLocaties.png" alt="Earth background">
+                <div class="earth-glow"></div>
+            </div>
         </section>
 
 

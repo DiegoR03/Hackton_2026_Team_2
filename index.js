@@ -1,4 +1,5 @@
 
+
 const buttons = document.querySelectorAll('button');
 
 function setActive(id) {
@@ -54,16 +55,10 @@ satelliteButtons.forEach(button => {
 
 
 
+// loading in top nav bar on all pages
+fetch("partials/nav.html")
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+    });
 
-
-
-
-
-// const buttons = document.querySelectorAll('button');
-
-// buttons.forEach(btn => {
-//   const bg = getComputedStyle(btn).backgroundColor; // "rgb(0, 128, 0)" for green
-//   if (bg === "rgb(0, 128, 0)") {
-//     console.log("This button is green:", btn.dataset.id);
-//   }
-// });

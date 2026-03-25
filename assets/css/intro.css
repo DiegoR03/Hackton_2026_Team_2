@@ -1,0 +1,219 @@
+#info {
+    display: grid;
+    background-color: #D53F15;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+          "title title"
+          "left right"
+          "bottom bottom";
+
+    padding-bottom: 7rem;
+    position: relative;
+    
+    h2 {
+        grid-area: title;
+        text-align: center;
+        padding: 1rem;
+        color: white;
+    }
+
+    li{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    p, a, li{
+        font-family: SpaceMonoRegular;
+        text-align: left;
+    }
+
+    a {
+        color: inherit;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    div p, ul li, ol li{
+        margin: 1rem;
+        border-radius: 5px;
+    }
+
+    ul {
+        grid-area: right;
+        list-style-type: none;
+    }
+
+    ol {
+        list-style-position: inside;
+        li{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    li::before {
+        content: "";
+        display: inline-block;
+        width: 40px; 
+        height: 40px;
+        background-image: url('../img/star-dot.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+
+    div {
+        grid-area: left;
+    }
+
+    .distortion-container {
+        grid-area: bottom;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#info::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-image: radial-gradient(circle at 50% 0%, #D53F15 70%, transparent 71%);
+    background-size: 80px 50px; 
+    background-repeat: repeat-x;
+    background-position: top center;
+    z-index: 2;
+}
+
+#distortion{
+    grid-area: bottom;
+    padding-left: 0;
+    width: 100%;
+    /* https://www.w3schools.com/css/css3_object-fit.asp */
+    object-fit: contain;
+}
+
+#distortionweight {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 1) 50%, transparent 100%);
+    border-radius: 50%;
+    z-index: 4;
+    pointer-events: none;
+
+    animation-name: gravityweight;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root);
+    animation-range: entry 0% exit 100%;
+}
+
+@keyframes gravityweight {
+    0% {
+        transform: translate(0, -12vw) scale(1.8);
+        opacity: 1;
+    }
+
+    2% {
+        transform: translate(-20vw, -10vw) scale(1.7);
+    }
+
+    4% {
+        transform: translate(-45vw, 0vw) scale(1.6);
+    }
+
+    6% {
+        transform: translate(-22.5vw, 4vw) scale(1.6);
+    }
+
+    8% {
+        transform: translate(0, 8vw) scale(1.4);
+    }
+
+    10% {
+        transform: translate(22.5, 4vw) scale(1.4);
+    }
+
+    12% {
+        transform: translate(45vw, 0vw) scale(1.2);
+    }
+
+    14% {
+        transform: translate(22.5, -3vw) scale(1.0);
+    }
+
+    16% {
+        transform: translate(0, -6vw) scale(1.0);
+    }
+
+    18% {
+        transform: translate(-12.5vw, -4vw) scale(0.8);
+    }
+
+    20% {
+        transform: translate(-25vw, -2vw) scale(0.8);
+    }
+
+    22% {
+        transform: translate(-12.5, 1vw) scale(0.7);
+    }
+
+    24% {
+        transform: translate(0, 4vw) scale(0.7);
+    }
+
+    25% {
+        transform: translate(12.5vw, 1vw) scale(0.6);
+    }
+
+    26% {
+        transform: translate(25vw, -2vw) scale(0.6);
+    }
+
+    27% {
+        transform: translate(12.5vw, -1.5vw) scale(0.6);
+    }
+
+    28% {
+        transform: translate(0, -1vw) scale(0.5); 
+    }
+
+    29% {
+        transform: translate(0, 2vw) scale(0.5); 
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(0, 5vw) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #info {
+        display: flex;
+        justify-content:flex-start;  
+        flex-direction: column;
+    }   
+
+    div {
+        grid-area: left;
+    }
+}
+
+    
