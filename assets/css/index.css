@@ -158,12 +158,14 @@ h2 {
     flex-direction: column-reverse;
     /* Verander flex: 0 0 15vh naar auto om ruimte te maken voor de marge */
     flex: 0 1 auto; 
-    z-index: 1;
+    z-index: 2;
     position: relative;
     transition: transform 0.3s ease;
 
     /* Push de titel omhoog in de rode box (ongeveer 15% tot 20% van de schermhoogte) */
     margin-bottom: 18vh; 
+    /* Je kunt nu de titel positioneren met margins zonder dat het gat meebeweegt */
+    margin-top: 60vh;
 }
 
 .pageTitle h1, 
@@ -224,7 +226,7 @@ position: relative;
     .pageTitle {
         transition: margin-top 0.3s ease;
         margin-bottom: 10vh;
-        
+
         span {
             font-size: 1.2em;
         }

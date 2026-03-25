@@ -6,25 +6,29 @@
 
 /* Met behulp van de codepen: https://codepen.io/cas-van-den-elzen/pen/MWLNEoz?editors=1100 */
 .blackhole-mask {
-    position: relative;
+position: absolute; 
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 69vh;
-    overflow: clip;
+    /* Maak de hoogte 100% van de section zodat ringen niet afsnijden */
+    height: 100dvh; 
+    overflow: hidden;
     clip-path: inset(0);
-    z-index: 1;
+    /* Zorg dat hij achter de tekst (z-index 1) blijft */
+    z-index: 1; 
+    pointer-events: none; /
 }
 
 .blackhole-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 75%;
     transform: scale(1.5);
     display: flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
     pointer-events: none;
-    margin-top: -5rem;
 }
 
 
