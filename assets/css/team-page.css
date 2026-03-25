@@ -31,6 +31,7 @@
 
         margin: 0;
         padding: 0;
+        padding-top: 1rem;
     }
 
     li {
@@ -98,13 +99,31 @@
     p {
         color: white;
         margin: 0;
+        font-family: 'SpaceMonoregular';
         font-size: .9em;
         margin-left: 1rem;
         margin-right: 1rem;
     }
 }
 
-/* experts section */
+.atronaut-button {
+    background-color: #EB5D34;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 30% 100%, 80% 50%, 30% 0); */
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+.astronaut-button-left {
+    left: 5%;
+    top: 20%;
+    transform: rotate(180deg);
+}
+
+/* sponsors section */
 section.team-sponsors {
     width: 95vw;
     min-height: 0;
@@ -123,7 +142,8 @@ section.team-sponsors {
         align-items: center;
         position: relative;
         overflow: hidden;
-        padding: 0.5rem
+        padding: 0.5rem;
+        border-radius: 5px;
     }
 
     img {
@@ -138,7 +158,6 @@ section.team-sponsors {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(250px , 1fr));
-    border: solid 1px white;
 }
 
 .sponsor-item {
@@ -193,9 +212,6 @@ section.team-sponsors {
         height: 120vh;
         margin-bottom: 0;
     }
-
-
-
 
     .team-astronaut-student-info {
         max-width: 600px;

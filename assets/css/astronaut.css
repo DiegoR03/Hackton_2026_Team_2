@@ -32,7 +32,7 @@
     left: 50%;
     width: 5rem;
     height: 3rem;
-    background-color: white;
+    background: radial-gradient(black 100%, white) 20px 12px / 50% 46% no-repeat;
     border: solid 4px black;
     translate: -2.6rem 1rem;
     border-radius: 1rem;
@@ -102,7 +102,6 @@
     translate: 7rem 3.5rem;
 }
 
-
 /* backpack */
 .team-astronaut-backpack {
     position: absolute;
@@ -115,6 +114,21 @@
     border-radius: .5rem;
     translate: -6rem -3rem;
     z-index: -99;
+}
+
+.team-astronaut-backpack::before, .team-astronaut-backpack::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 9rem;
+    background-color: rgb(215, 215, 215);
+    translate: -5rem -4.5rem;
+}
+
+.team-astronaut-backpack::after {
+    translate: 4rem -4.5rem;
 }
 
 /* arms */
