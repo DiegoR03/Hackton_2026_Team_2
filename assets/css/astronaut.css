@@ -205,7 +205,12 @@
 }
 
 .team-astronaut-leg-right {
-    translate: 1rem 5rem;
+    /* translate: 1rem 5rem; */
+    animation: astronaut-right-leg 10s infinite  alternate ease-in-out; 
+}
+
+.team-astronaut-leg-left {
+    animation: astronaut-left-leg 5s infinite  alternate ease-in-out; 
 }
 
 .team-astronaut-leg-left::before, .team-astronaut-leg-right::before {
@@ -253,26 +258,26 @@
 
 @keyframes astronaut-left-leg {
     0% {
-        transform: rotate(-135deg);
-        translate: -11.5rem -4rem;
-        transform-origin: right center;
+        transform-origin: left center;
+        transform: rotate(190deg);
+        translate: -1rem 5rem;   
     }
     100% {
-        transform: rotate(-145deg);
-        translate: -11.5rem -4rem;
-        transform-origin: right center;
+        transform-origin: left center;
+        transform: rotate(200deg);
+        translate: -1rem 5rem;
     }
 }
 
 @keyframes astronaut-right-leg {
     0% {
-        transform: rotate(-135deg);
-        translate: -11.5rem -4rem;
         transform-origin: right center;
+        transform: rotate(-190deg);
+        translate: -2rem 5rem;
     }
     100% {
-        transform: rotate(-145deg);
-        translate: -11.5rem -4rem;
         transform-origin: right center;
+        transform: rotate(-200deg);
+        translate: -2rem 5rem;
     }
 }
