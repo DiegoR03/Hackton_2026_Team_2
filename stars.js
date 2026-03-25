@@ -1,4 +1,5 @@
 // Function used and remade from own older project: https://github.com/DiegoR03/Portfolio-Website/blob/main/js/backgroundIcon.js
+// Hulp van Gemini: https://gemini.google.com/share/fc9e9c0da979
 function createStarField(container) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
