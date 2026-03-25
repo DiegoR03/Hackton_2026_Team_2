@@ -148,6 +148,7 @@
 @media (max-width: 1032px) {
     #locatiesSRON {
         height: auto;
+        padding-bottom: 4rem;
     }
 
     #earthLocaties-container {
