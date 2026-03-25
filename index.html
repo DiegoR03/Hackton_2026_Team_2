@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,9 @@
     <script src="stars.js" defer></script>
     <script src="nebula.js" defer></script>
     <link rel="stylesheet" href="assets/css/maja.css">
+    <link rel="stylesheet" href="assets/css/steps.css">
 </head>
+
 <body>
     <header>
         <div id="nav-placeholder"></div>
@@ -35,7 +38,7 @@
 
             <!-- title -->
             <!-- this gets sucked in -->
-             <div class="pageTitle">
+            <div class="pageTitle">
                 <h1 aria-hidden="true">
                     <span>N</span>
                     <span>E</span>
@@ -53,15 +56,18 @@
                     <span>r</span>
                 </h1>
                 <h2>Mission In development</h2>
-             </div>
-             <a href="#info" class="moreinfo-button">
+            </div>
+            <a href="#info" class="moreinfo-button">
                 <span>More about the Mission</span>
                 <div class="arrow"></div>
             </a>
         </section>
 
         <!-- Info about nebula -->
+        <section id="info">
+
          <section id="info" >
+
             <h2>About NEBULA - Xplorer</h2>
             <ul>
                 <li>400~ Studenten</li>
@@ -73,22 +79,26 @@
             <div>
                 <p>NEBULA – Xplorer stands for “Netherlands Educational Satellite for Exploration of Binary-Linked Astrophysics – X-ray Observer”. About 400 students will join SRON, 14 Dutch educational institutions and many industrial partners in developing this space mission from start to finish, led by scientists and engineers. The mission has two goals. The scientific goal is to better understand how a black hole captures material from a companion star. The educational goal is for students from Dutch educational institutions to experience first hand how to build a space mission from the ground up. SRON is leading the NEBULA – Xplorer mission, contributing to a new generation of scientists, designers and technicians for Dutch space research.</p>
             </div>
-            <div class="distortion-container">
+
+           <div class="distortion-container"></div>
             <img id="distortion" src="./assets/img/Space-time-distortion.png">
             <span id="distortionweight"></span>
         </div>
          </section>
 
+
         <!-- satellite -->
         <!-- <a href="https://www.vecteezy.com/free-png/world-map-transparent-background">World Map Transparent Background PNGs by Vecteezy</a> -->
         <section id="satellite-rotation" class="stars" >
             <div id="earth-container">
-                
+
                 <div id="earth">
                     <div id="earth-visible">
 
                     </div>
                     <figure id="satellite">
+
+
                         <div class="transform-container" >
                             <div class="transform-container2">
                                 <div class="transform-container3">
@@ -104,7 +114,7 @@
                         </div>
                     </figure>
                 </div>
-                
+
             </div>
 
             <section id="satellite-steps" style="--stn: --satellite-steps-section">
@@ -229,9 +239,107 @@
 
         </section>
 
-        <!-- steps until launch -->
-        <section>
+        <!-- steps before launch -->
+        <section class="steps-outer-container">
+            <div class="steps-header">
+                <h2>STEPS BEFORE LAUNCH</h2>
+                <p class="steps-intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
 
+            <div class="steps-sticky-wrapper">
+
+
+                <!-- desktop -->
+                <div class="desktop-vertical-path">
+                    <svg class="desktop-path-svg" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="desktop-orbit-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#EB5D34" />
+                                <stop offset="100%" stop-color="#4A90E2" />
+                            </linearGradient>
+                        </defs>
+                        <!-- main path curve -->
+                        <path id="desktop-orbit-path" d="M0,0 Q200,300 0,600" stroke="url(#desktop-orbit-gradient)"
+                            stroke-width="6" fill="none" />
+
+                        <!-- static nodes and connecting lines -->
+                        <g class="path-node" transform="translate(43.5, 75)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(93.5, 225)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(93.5, 375)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <g class="path-node" transform="translate(43.5, 525)">
+                            <circle r="4" fill="transparent" stroke="white" stroke-width="1" />
+                            <line x1="4" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                        </g>
+
+                        <!-- moving Star -->
+                        <g id="desktop-star" style="offset-path: path('M0,0 Q200,300 0,600'); offset-distance: 0%;">
+                            <circle r="6" fill="white" />
+                            <circle r="14" fill="#EB5D34" opacity="0.4" class="pulse-glow-svg" />
+                            <line x1="-20" y1="0" x2="20" y2="0" stroke="white" stroke-width="0.8" opacity="0.6" />
+                            <line x1="0" y1="-20" x2="0" y2="20" stroke="white" stroke-width="0.8" opacity="0.6" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- mobile -->
+                <div class="orbit-container mobile-orbit">
+                    <svg class="orbit-svg" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="orbit-path" d="M20,100 Q200,20 380,100" stroke="url(#orbit-gradient)" stroke-width="2"
+                            fill="none" />
+                        <defs>
+                            <linearGradient id="orbit-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#4A90E2" />
+                                <stop offset="100%" stop-color="#EB5D34" />
+                            </linearGradient>
+                        </defs>
+                        <!-- star group inside svg -->
+                        <g id="star-icon" style="offset-path: path('M20,100 Q200,20 380,100'); offset-distance: 0%;">
+                            <circle r="4" fill="white" />
+                            <circle r="10" fill="white" opacity="0.2" class="pulse-glow-svg" />
+                            <line x1="-15" y1="0" x2="15" y2="0" stroke="white" stroke-width="0.5" opacity="0.5" />
+                            <line x1="0" y1="-15" x2="0" y2="15" stroke="white" stroke-width="0.5" opacity="0.5" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="steps-display">
+                    <div class="step-content active" data-step="1">
+                        <h3>Reviews and Design Confirmation</h3>
+                        <p>Before production and launch, the project passes formal ECSS review stages. The System Requirements Review (SRR) defines and validates system needs. The Preliminary Design Review (PDR) evaluates the current design. Finally, the Critical Design Review (CDR) confirms readiness for manufacturing and verifies that all requirements are met.</p>                    </div>
+                    <div class="step-content" data-step="2">
+                        <h3>Testing and Qualification (V&V)</h3>
+                        <p>Verification and Validation ensures that all systems perform correctly. The Engineering Model (EM) is used for functional testing, while the Proto Flight Model (PFM) undergoes strict qualification tests. Activities include COTS component testing, FPGA prototyping, and alignment of the Optical Bench Assembly to withstand launch conditions.</p>
+                    </div>
+                    <div class="step-content" data-step="3">
+                        <h3>Assembly, Integration, and Test (AIT)</h3>
+                        <p>In the AIT phase, all subsystems are combined into a complete satellite. This includes propulsion and navigation systems such as star trackers. Interface control ensures compatibility between components. The integration of the 15-inch MkII Motorized Lightband connects the satellite securely to the launch vehicle.</p>
+                    </div>
+                    <div class="step-content" data-step="4">
+                        <h3>Launch Campaign (Pre-launch Phase)</h3>
+                        <p>At the launch site, final preparations are completed. The propulsion system is fueled with propylene and nitrous oxide. The satellite is mounted on a SpaceX Falcon 9 as a rideshare payload. The Flight Readiness Review (FRR) confirms launch readiness before liftoff and the start of LEOP.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- scroll trigger areas -->
+            <div class="step-trigger" data-trigger="1"></div>
+            <div class="step-trigger" data-trigger="2"></div>
+            <div class="step-trigger" data-trigger="3"></div>
+            <div class="step-trigger" data-trigger="4"></div>
         </section>
 
         <!-- partnership/team -->
@@ -301,7 +409,14 @@
 
     <div id="footer-placeholder"></div>
 
+
+
+
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
     <script src="index.js"></script>
+    <script src="steps.js"></script>
 </body>
+
 </html>
+

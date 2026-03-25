@@ -1,0 +1,252 @@
+/* /////////////////// */
+/* steps before launch */
+/* /////////////////// */
+
+.steps-outer-container {
+    position: relative;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding-bottom: 20vh;
+    /* space at the end */
+}
+
+.steps-sticky-wrapper {
+    position: sticky;
+    top: 64px;
+    /* below navbar */
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    pointer-events: none;
+    /* allow scrolling through */
+}
+
+.steps-sticky-wrapper>* {
+    pointer-events: auto;
+}
+
+.steps-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.steps-header h2 {
+    color: var(--accent-orange);
+    font-family: var(--font-mono-bold);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    padding-top: 5rem;
+}
+
+.steps-intro-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.orbit-container {
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.orbit-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+#star-icon {
+    offset-path: path('M20,100 Q200,20 380,100');
+    offset-rotate: auto;
+    offset-distance: 0%;
+    transition: offset-distance 0.1s linear;
+}
+
+.pulse-glow-svg {
+    animation: pulse-glow-svg 2s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes pulse-glow-svg {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.4;
+    }
+}
+
+.steps-display {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.step-content {
+    grid-area: 1 / 1 / 2 / 2;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.step-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.step-content h3 {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* scroll trigger blocks */
+.step-trigger {
+    height: 100vh;
+    /* each step takes 1 screen height of scrolling */
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .steps-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .steps-sticky-wrapper {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* desktop styles for steps before launch */
+@media screen and (min-width: 768px) {
+    .steps-outer-container {
+        padding-top: 4rem;
+    }
+
+    .steps-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 1.5rem auto;
+        padding: 0 2rem;
+    }
+
+    .steps-header h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .steps-intro-text {
+        text-align: center;
+    }
+
+    .steps-sticky-wrapper {
+        position: sticky;
+        top: 64px;
+        height: calc(100vh - 64px);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .orbit-container.mobile-orbit {
+        display: none;
+    }
+
+    .desktop-vertical-path {
+        display: block;
+        position: absolute;
+        left: 0.8rem;
+        top: 0vh;
+        height: 95vh;
+        width: 400px;
+        z-index: 4;
+        opacity: 1;
+        /* always visible on desktop */
+    }
+
+    .desktop-path-svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    /* staggered vertical steps */
+    .steps-display {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 5vh;
+        height: 85vh;
+        width: 500px;
+        opacity: 1;
+        /* always visible on desktop */
+    }
+
+    .step-content {
+        position: absolute;
+        left: -3rem;
+        width: 100%;
+        opacity: 0.2;
+        /* inactive steps remain mostly hidden but visible */
+        transform: translateY(-50%) translateX(20px);
+        transition: all 0.5s ease;
+        text-align: left;
+        visibility: visible;
+    }
+
+    .step-content.active {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    .step-content h3,
+    .step-content p {
+        text-align: left;
+        width: 110%;
+    }
+
+    /* step alignment */
+    .step-content[data-step="1"] {
+        top: 11%;
+    }
+
+    .step-content[data-step="2"] {
+        top: 39%;
+    }
+
+    .step-content[data-step="3"] {
+        top: 67%;
+    }
+
+    .step-content[data-step="4"] {
+        top: 93%;
+    }
+}
