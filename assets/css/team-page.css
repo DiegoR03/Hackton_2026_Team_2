@@ -7,9 +7,6 @@
     margin: 0;
 }
 
-/* .team-bg {
-    background: linear-gradient(#181932, white);
-} */
 /* Astronaut section */
 .team-astronaut {
     height: 150vh;
@@ -52,6 +49,7 @@
 .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
     translate: 11.5rem -18rem;
     animation: astronaut-float 4s infinite  alternate ease-in-out;
+    box-sizing:inherit;
 }
 
 /* Astronaut-2 */
