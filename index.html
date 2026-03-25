@@ -60,7 +60,7 @@
         </section>
 
         <!-- Info about nebula -->
-         <section id="info">
+         <section id="info" >
             <h2>About NEBULA - Xplorer</h2>
             <ul>
                 <li>400~ Studenten</li>
@@ -80,22 +80,33 @@
 
         <!-- satellite -->
         <!-- <a href="https://www.vecteezy.com/free-png/world-map-transparent-background">World Map Transparent Background PNGs by Vecteezy</a> -->
-        <section id="satellite-rotation">
+        <section id="satellite-rotation" class="stars" >
             <div id="earth-container">
                 
                 <div id="earth">
+                    <div id="earth-visible">
+
+                    </div>
                     <figure id="satellite">
                         <div class="transform-container" >
-                            <!-- https://modelviewer.dev/ -->
-                            <model-viewer alt="Nebula Xplorer Satellite" src="assets/models/NEBULA-Xplorer-Bus-v2.glb" environment-image="neutral" camera-controls camera-target="0m 0m 0m" auto-rotate disable-zoom style="width: 100px;"></model-viewer>
-                            <!-- <img src="assets/images/satellite-design.png"></img> -->
+                            <div class="transform-container2">
+                                <div class="transform-container3">
+                                    <div class="transform-container4">
+                                        <!-- https://modelviewer.dev/ -->
+                                        <model-viewer alt="Nebula Xplorer Satellite" src="assets/models/module-1.glb" environment-image="neutral" camera-controls camera-target="0m 0m 0m" auto-rotate disable-zoom style="width: 100px;"></model-viewer>
+                                    </div>
+
+                                </div>
+                                
+                                
+                            </div>
                         </div>
                     </figure>
                 </div>
                 
             </div>
 
-            <section id="satellite-steps">
+            <section id="satellite-steps" style="--stn: --satellite-steps-section">
                 <div id="satellite-step-container">
                     <article class="satellite-step0">
                         <div class="text">
