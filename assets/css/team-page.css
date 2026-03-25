@@ -7,9 +7,9 @@
     margin: 0;
 }
 
-.team-bg {
+/* .team-bg {
     background: linear-gradient(#181932, white);
-}
+} */
 /* Astronaut section */
 .team-astronaut {
     height: 150vh;
@@ -50,7 +50,7 @@
 
 /* astronaut floating animatino */
 .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
-    translate: 11.5rem -12rem;
+    translate: 11.5rem -18rem;
     animation: astronaut-float 4s infinite  alternate ease-in-out;
 }
 
@@ -81,11 +81,11 @@
     max-width: 400px;
     max-height: 20vh; 
     text-align: center;
-    translate: 0rem 14rem;
+    translate: 0rem 6rem;
     margin-bottom: 2rem;
 
     > h2 {
-        font-size: 3em;
+        font-size: 2em;
         margin: 0;
         color: white;
     }
@@ -93,12 +93,16 @@
     > h3 {
         color: #EB5D34;
         text-transform: uppercase;
-        /* font-family: 'RobotoVariable'; */
+        margin-top:.3rem;
+        font-family: 'SpaceMonoRegular';
     }
 
     p {
         color: white;
         margin: 0;
+        font-size: .9em;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -107,16 +111,27 @@ section.team-sponsors {
     width: 95vw;
     min-height: 0;
     height: auto;
-    border: solid 1px white;
     justify-self: center;
     padding: 0rem;
 
-    img {
-        max-width: 100%;
-        width: 20vw;
+    figure {
+        width: 85%;
+        height: 65%;
+        background-color: white;
         justify-self: center;
         align-self: center;
-        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0.5rem
+    }
+
+    img {
+        max-width: 100%;
+        width:clamp(10rem, 2.5vw, 2rem);
+        object-fit: cover;
     }
 }
 
@@ -125,7 +140,7 @@ section.team-sponsors {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(250px , 1fr));
-    /* grid-template-rows:repeat(6, 1fr); */
+    border: solid 1px white;
 }
 
 .sponsor-item {
@@ -137,9 +152,15 @@ section.team-sponsors {
 }
 
 .sponsor-title {
-    font-family: 'RobotoVariable';
-    font-size: 2em;
-    color:#EB5D34
+    font-family: 'SpaceMonoRegular';
+    font-size: 1.5em;
+    color: #EB5D34;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sponsor-name   {
+    text-align: start;
 }
 
 .team-sponsor-1-text-container {
@@ -169,12 +190,20 @@ section.team-sponsors {
 
 /* large screeeen */
 @media (min-width: 600px) {
+
+    .team-astronaut {
+        height: 120vh;
+        margin-bottom: 0;
+    }
+
+
+
+
     .team-astronaut-student-info {
-        translate: 0rem 15rem;
         max-width: 600px;
     }
 
     .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
-        translate: 18.5rem -8rem;
+        translate: 18.5rem -18rem;
     }
 }
