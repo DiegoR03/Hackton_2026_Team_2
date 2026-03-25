@@ -75,7 +75,7 @@ position: absolute;
 
 .location-card {
     position: absolute;
-    width: 25rem;
+    width:55vh;
     z-index: 5;
     background: rgb(24, 25, 50, 0.7);
     backdrop-filter: blur(10px);
