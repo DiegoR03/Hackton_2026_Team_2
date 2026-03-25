@@ -1,0 +1,169 @@
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: RobotoVariable;
+    src: url('../fonts/Roboto-VariableFont.ttf');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoBold;
+    src: url('../fonts/SpaceMono-Bold.ttf');
+}
+
+@font-face {
+    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
+    font-family: SpaceMonoRegular;
+    src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
+footer {
+    font-family: SpaceMonoRegular;
+    display: grid;
+    background-color: #D53F15;
+    grid-template-columns: 5vw 50vw 1fr 5vw;
+    grid-template-rows: 1fr 10rem;
+    position: relative;
+    gap: 1rem;
+    width: 100vw;
+
+    div p{
+        font-size: 4vh;
+        text-align: left;
+        border-bottom: 1px solid white;
+        width: 100%;
+        position: relative; 
+        display: block;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 40px; 
+            height: 40px;
+            position: absolute;
+            bottom: -21px;
+            right: -20px;
+            background-image: url('../img/star-dot.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        
+        li a {
+                text-decoration: underline;
+                color: white;
+            }
+    }
+
+    #footer-menu{
+        grid-row: 1;
+        grid-column: 2;
+        padding: 2rem;
+    }
+
+    #footer-menu-lists{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        ul{
+            padding-top: 2rem;
+        }
+    }
+
+    #footer-socials{
+        padding: 2rem;
+        grid-row: 1;
+        grid-column: 3;
+
+        ul{
+            padding-top: 2rem;
+
+            li{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    flex-shrink: 0;
+                }
+
+                &:nth-of-type(1)::before{
+                    background-image: url(../img/socials/Bluesky.png);
+                }
+
+                &:nth-of-type(2)::before{
+                    background-image: url(../img/socials/Instagram.png);
+                }
+
+                &:nth-of-type(3)::before{
+                    background-image: url(../img/socials/LinkedIn.png);
+                }
+            }
+        }
+    }
+
+    #footer-title{
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-family: RobotoVariable;
+        text-transform: uppercase;
+        font-weight: bolder;
+        
+        text-align: justify;
+        text-align-last: justify; 
+        white-space: nowrap;
+        font-size: 11.5vw;
+
+        padding: 0;
+        grid-row: 2;
+        grid-column: 1/5;
+        line-height: 1.1;
+        overflow-y: hidden;
+        align-items: flex-end;
+        background: -webkit-linear-gradient(#D53F1500 30%, #eee 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: radial-gradient(circle at 50% 100%, #D53F15 70%, transparent 71%);
+    background-size: 80px 50px;
+    background-repeat: repeat-x;
+    background-position: top center;
+    z-index: 2;
+    }
+}
+
+@media (max-width: 1032px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+        div p {
+        margin: 0;
+    }
+
+        #footer-title {
+        margin: 0;
+        padding-top: 10rem;
+        text-align: left;
+    }
+
+}
