@@ -276,7 +276,7 @@
 
     #satellite-step-container {
         position: relative;
-        height: 600vw;
+        height: max-content;
         margin: 0;
         padding: 0;
             
@@ -329,7 +329,7 @@
 .satellite-step1 {
 
     
-    height: 1600vh;
+    height: max-content;
     grid-template-rows: max-content max-content 1fr;
     grid-template-columns: 8fr 5fr;
 
