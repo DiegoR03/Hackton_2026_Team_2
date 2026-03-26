@@ -211,9 +211,6 @@
                 padding: 2rem 6rem 5rem 2rem;
                 
 
-                @media (max-width: 470px) {
-                    width: 80%;
-                }
 
                 &:first-of-type {
                     background-color: #EB5D33;
@@ -224,8 +221,6 @@
                 background-color: #D53F16;
                 padding: 2rem 2rem 5rem 6rem;
                 margin: 0;
-                width: 100%;
-                height: 100%;
             }
 
             h2{
@@ -346,9 +341,12 @@
     }  */
 
     #satellite-steps .satellite-explanation-container {
-        width: 80%;
+        width: 100%;
         justify-self: center;
+        align-self: start;
     }
+
+ 
 
 }
 
@@ -368,6 +366,10 @@
         width: 80%;
         justify-self: center;
     }
+
+
+
+    
 
 }
 
@@ -523,6 +525,7 @@
 
     button {
       background: var(--accent-orange);
+      border: none;
     }
     
     button.active {
@@ -673,6 +676,8 @@
             entry 100% entry 100rem;
         animation-fill-mode: both;
     }
+
+    z-index: 1;
 }
 
 #earth-visible {
@@ -738,9 +743,7 @@
         --earth-margin-bottom: calc(var(--earth-width)*2);
     }
 
-    #satellite-steps #satellite-step-container .satellite-step0 .text {
-        width: 80%;
-    }
+    
 
 }
 
@@ -761,12 +764,9 @@
         --earth-margin-bottom: calc(var(--earth-width)*2);
     }
 
-    #satellite-rotation #satellite-steps #satellite-step-container .satellite-step0 .text {
-        width: 80%;
-    }
+    
     #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {
-        width: 100%;
-        height: 100%;
+        
         grid-column: 2/4;
         grid-row: 1/2;
     }
@@ -796,6 +796,19 @@
     }
 }
 
+@media (min-width: 500px) {
+    .satellite-step1 {
+        grid-template-rows: max-content 4fr 1fr;
+    }
+
+    #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {
+        
+        padding: 2rem 2rem 5rem 5rem;
+    }
+
+}
+
+
 @media (min-width: 690px) {
     :root {
         --satellite-position-x: -8vw;
@@ -805,6 +818,7 @@
 
     .satellite-step1 {
         grid-template-rows: 4fr 1fr;
+        margin-left: 2rem;
     }
 
     #satellite-rotation #satellite-steps #satellite-step-container .satellite-step0 .text {
@@ -816,8 +830,9 @@
     }
 
     #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {
-        width: 100%;
-        height: 100%;
+
+        padding-bottom: 15vh;
+        padding-left: 15vw;
         
     }
 
@@ -834,6 +849,13 @@
     }
 }
 
+@media (min-width: 900px) {
+    .satellite-explanation-container {
+        transform: scale(1.5);
+        margin-top: 2rem;
+    }
+}
+
 @media (min-width: 720px) {
     :root {
         --satellite-position-x: -10vw;
@@ -845,8 +867,8 @@
 
 @media (min-width: 800px) {
     :root {
-        --satellite-position-x: -13vw;
-        --satellite-position-y: 72vh;
+        --satellite-position-x: -8vw;
+        --satellite-position-y: 70vh;
         --satellite-scale: 4;
     }
 }
@@ -854,17 +876,23 @@
 
 @media (min-width: 960px) {
     :root {
-        --satellite-position-x: -5vw;
+        --satellite-position-x: 0vw;
         --satellite-position-y: 70vh;
         --satellite-scale: 4;
+    }
+}
+
+@media (min-width: 1000px) {
+    #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {        
+      padding-bottom: 20vh;
     }
 }
 
 
 @media (min-width: 1100px) {
     :root {
-        --satellite-position-x: 0vw;
-        --satellite-position-y: 70vh;
+        --satellite-position-x: 5vw;
+        --satellite-position-y: 65vh;
 
         --satellite-scale: 5;
     }
