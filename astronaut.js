@@ -3,9 +3,13 @@ const list = document.querySelector('.astronaut-carousel-list');
 const left = document.querySelector('.astronaut-button-left');
 const right = document.querySelector('.astronaut-button-right');
 
+const earth = document.getElementById('earthLocaties-container')
+
 const astronaut = document.querySelectorAll('.team-astronaut-1, .team-astronaut-2, .team-astronaut-3');
 
 updateButton()
+
+// remove scroll buttons function
 function updateButton() {
 
     if(list.scrollLeft <= 0) {
@@ -28,6 +32,7 @@ function updateButton() {
 
 list.addEventListener('scroll', updateButton)
 
+// scroll left / right buttons
 left.addEventListener('click', () => {
     list.scrollBy({
         left: -list.clientWidth, 
@@ -42,15 +47,21 @@ right.addEventListener('click', () => {
     });
 });
 
+// move astronauts
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
     astronaut.forEach(astro => {
-        const speed = 1;
+        const speed = 2;
 
         astro.style.setProperty(
             '--astronaut-scroll-offset',
             `${scrollY * speed}px`
         );
     });
+
+    const speed = 0.6;
+    const move = scrollY * speed;
+    earth.style.transform = `translateY(${move}px)`
+
 });
