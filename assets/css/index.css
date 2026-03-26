@@ -1,25 +1,3 @@
-:root {
-    --text-color: white;
-}
-
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: RobotoVariable;
-    src: url('../fonts/Roboto-VariableFont');
-}
-
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: SpaceMonoBold;
-    src: url('../fonts/SpaceMono-Bold.ttf');
-}
-
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: SpaceMonoRegular;
-    src: url('../fonts/SpaceMono-Regular.ttf');
-}
-
 /* Body elementen */
 html {
     scroll-behavior: smooth;
@@ -32,7 +10,8 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100dvh;
+    display: flow-root;
 }
 
 /* Typografie */
@@ -40,21 +19,21 @@ h1,
 h2,
 p {
     text-align: center;
-    color: white;
+    color: var(--text-white);
 }
 
 h1 {
-    font-family: SpaceMonoBold;
+    font-family: var(--font-mono-bold);
 }
 
 h2 {
     margin-top: 0;
-    font-family: SpaceMonoRegular;
+    font-family: var(--font-mono);
     text-transform: uppercase;
 }
 
 h2 {
-    color: #EB5D34;
+    color: var(--accent-orange);
     font-size: 20px;
 }
 
@@ -68,59 +47,59 @@ h2 {
     animation-timeline: scroll(root);
 
     &:nth-child(1) {
-        animation-range: entry 0% exit 7%;
+        animation-range: entry 0% exit 1%;
     }
 
     &:nth-child(2) {
-        animation-range: entry 1% exit 8%;
+        animation-range: entry 0% exit 1.5%;
     }
 
     &:nth-child(3) {
-        animation-range: entry 2% exit 9%;
+        animation-range: entry 1% exit 2.5%;
     }
 
     &:nth-child(4) {
-        animation-range: entry 3% exit 10%;
+        animation-range: entry 1% exit 3.5%;
     }
 
     &:nth-child(5) {
-        animation-range: entry 4% exit 11%;
+        animation-range: entry 2% exit 4.5%;
     }
 
     &:nth-child(6) {
-        animation-range: entry 5% exit 12%;
+        animation-range: entry 2% exit 5.5%;
     }
 
     &:nth-child(7) {
-        animation-range: entry 6% exit 13%;
+        animation-range: entry 3% exit 6.5%;
     }
 
     &:nth-child(8) {
-        animation-range: entry 7% exit 14%;
+        animation-range: entry 3% exit 7.5%;
     }
 
     &:nth-child(9) {
-        animation-range: entry 8% exit 15%;
+        animation-range: entry 4% exit 8.5%;
     }
 
     &:nth-child(10) {
-        animation-range: entry 9% exit 16%;
+        animation-range: entry 4% exit 9.5%;
     }
 
     &:nth-child(11) {
-        animation-range: entry 10% exit 17%;
+        animation-range: entry 5% exit 10.5%;
     }
 
     &:nth-child(12) {
-        animation-range: entry 11% exit 18%;
+        animation-range: entry 5% exit 11.5%;
     }
 
     &:nth-child(13) {
-        animation-range: entry 12% exit 19%;
+        animation-range: entry 6% exit 12.5%;
     }
 
     &:nth-child(14) {
-        animation-range: entry 13% exit 20%;
+        animation-range: entry 6% exit 13.5%;
     }
 }
 
@@ -132,7 +111,7 @@ h2 {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    font-family: SpaceMonoBold;
+    font-family: var(--font-mono-bold);
     font-size: 0.7rem;
     text-transform: uppercase;
     color: #ffffff99;
@@ -155,10 +134,18 @@ h2 {
 .pageTitle {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: -40vh;
-    transition: margin-top 0.3s ease;
-    z-index: 1;
+    flex: 0 1 auto; 
+    z-index: 2;
     position: relative;
+    transition: transform 0.3s ease;
+    margin-bottom: 18vh; 
+    margin-top: 60vh;
+}
+
+.pageTitle h1, 
+.pageTitle h2 {
+    margin: 0;
+    padding: 0;
 }
 
 /* Stars and svg */
@@ -194,9 +181,14 @@ h2 {
 }
 
 .stars {
+position: relative;
     inset: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: clip;
-    z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -206,8 +198,8 @@ h2 {
     }
 
     .pageTitle {
-        margin-top: -25vh;
         transition: margin-top 0.3s ease;
+        margin-bottom: 10vh;
 
         span {
             font-size: 1.2em;
@@ -254,8 +246,6 @@ h2 {
         visibility: hidden;
     }
 }
-
-
 
 @media (max-width: 768px) {
     @keyframes spaghettify {

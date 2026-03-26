@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'SpaceMonoRegular', monospace;
+    font-family: var(--font-mono);
 }
 
 #locatie-titel {
@@ -49,8 +49,8 @@
 
 
 .connection-lines {
-position: absolute;
-    top: 0; 
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -75,7 +75,7 @@ position: absolute;
 
 .location-card {
     position: absolute;
-    width: 25rem;
+    width: 55vh;
     z-index: 5;
     background: rgb(24, 25, 50, 0.7);
     backdrop-filter: blur(10px);
@@ -87,6 +87,13 @@ position: absolute;
     text-align: center;
     transition: all 0.4s ease;
     cursor: pointer;
+}
+
+#locatie-leiden,
+#locatie-groningen {
+    a {
+        text-decoration: none;
+    }
 }
 
 #locatie-leiden {
@@ -111,12 +118,12 @@ position: absolute;
 .city-name {
     font-size: 1.5rem;
     color: rgb(173, 216, 230);
-    border-bottom: 2px solid #0858eb;
+    border-bottom: 2px solid var(--accent-orange);
     display: inline-block;
-    padding-bottom: 0.5rem;
 }
 
 .sub-text {
+    padding-top: 0.5rem;
     font-size: 0.8rem;
     opacity: 0.9;
     line-height: 1.6;
@@ -148,18 +155,31 @@ position: absolute;
 .pulse-circle {
     fill: rgba(235, 8, 8, 0.5);
     transform-origin: center;
-    transform-box: fill-box; 
+    transform-box: fill-box;
     animation: pulse 2s infinite;
 }
 
 @keyframes fadeInMarker {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    70% { transform: scale(2.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
 }
 
 @keyframes drawLine {
