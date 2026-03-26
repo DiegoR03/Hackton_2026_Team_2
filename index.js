@@ -28,8 +28,6 @@ buttons.forEach(button => {
 
 
 
-
-
 const satelliteButtons = document.querySelectorAll('.button-container button');
 
 satelliteButtons.forEach(button => {
