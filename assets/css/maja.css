@@ -620,6 +620,7 @@
 
 #satellite-rotation {
     view-timeline-name: --satellite-section;
+     z-index: 1;
 }
 
 .transform-container {
@@ -636,6 +637,7 @@
     0% {
         
         transform: translateY(-10rem);
+        z-index: 1;
         
     }
     100% {
@@ -688,7 +690,7 @@
 @keyframes orbit-x {
 	from { 
         transform: translateZ(0) translateX(0);
-        z-index: 3;
+        z-index: 1;
     }
 	50% { 
         transform: translateX(calc(var(--earth-width)*-1.5));

@@ -61,6 +61,23 @@ satelliteButtons.forEach(button => {
   });
 });
 
+function showTab(tabId, clickedButton) {
+    // 1. Verberg alle tekst divs
+    const textDivs = document.querySelectorAll('#informatie-text > div');
+    textDivs.forEach(div => div.classList.remove('active'));
+
+    // 2. Toon de gekozen tekst div
+    document.getElementById(tabId).classList.add('active');
+
+    // 3. Verwijder active class van alle knoppen
+    const buttons = document.querySelectorAll('#informatie-section-button button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // 4. Voeg active toe aan de knop waar je op klikte
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+}
 
 
 

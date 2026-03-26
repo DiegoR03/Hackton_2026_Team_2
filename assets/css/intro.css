@@ -2,7 +2,7 @@
   display: grid;
   background-color: #d53f15;
   padding: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 65vw 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "title title"
@@ -43,6 +43,7 @@
   ul li,
   ol li {
     margin: 1rem;
+    margin-left: 2rem;
     border-radius: 5px;
   }
 
