@@ -16,7 +16,7 @@
     grid-area: title;
     text-align: center;
     padding: 1rem;
-    color: white;
+    color: var(--text-white);
   }
 
   li {
@@ -28,7 +28,7 @@
   p,
   a,
   li {
-    font-family: SpaceMonoRegular;
+    font-family: var(--font-mono);
     text-align: left;
   }
 

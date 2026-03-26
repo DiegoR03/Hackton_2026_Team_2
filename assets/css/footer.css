@@ -1,23 +1,6 @@
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: RobotoVariable;
-    src: url('../fonts/Roboto-VariableFont.ttf');
-}
-
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: SpaceMonoBold;
-    src: url('../fonts/SpaceMono-Bold.ttf');
-}
-
-@font-face {
-    /* Squares Bold van https://www.1001fonts.com/squares-bold-font.html */
-    font-family: SpaceMonoRegular;
-    src: url('../fonts/SpaceMono-Regular.ttf');
-}
 
 footer {
-    font-family: SpaceMonoRegular;
+    font-family: var(--font-mono);
     display: grid;
     background-color: #D53F15;
     grid-template-columns: 5vw 50vw 1fr 5vw;
@@ -53,7 +36,7 @@ footer {
         
         li a {
                 text-decoration: underline;
-                color: white;
+                color: var(--text-white);
             }
     }
 
@@ -114,7 +97,7 @@ footer {
         width: 100%;
         bottom: 0;
         position: relative;
-        font-family: RobotoVariable;
+        font-family: var(--font-main);
         text-transform: uppercase;
         font-weight: bolder;
         

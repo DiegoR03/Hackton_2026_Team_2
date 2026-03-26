@@ -30,6 +30,7 @@ function applyNebula() {
         section.style.backgroundImage = nebulaGradient;
         section.style.backgroundAttachment = 'fixed';
         section.style.transition = 'background-image 0.5s ease';
+        
     });
 }
 

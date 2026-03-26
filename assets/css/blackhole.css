@@ -1,20 +1,12 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 /* Met behulp van de codepen: https://codepen.io/cas-van-den-elzen/pen/MWLNEoz?editors=1100 */
 .blackhole-mask {
 position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
-    /* Maak de hoogte 100% van de section zodat ringen niet afsnijden */
     height: 100dvh; 
     overflow: hidden;
     clip-path: inset(0);
-    /* Zorg dat hij achter de tekst (z-index 1) blijft */
     z-index: 1; 
     pointer-events: none; /
 }
