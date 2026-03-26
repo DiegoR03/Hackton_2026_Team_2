@@ -29,8 +29,8 @@
 
 .steps-header {
     text-align: center;
-    margin-bottom: 2rem;
-    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    max-width: 450px;
 }
 
 .steps-header h2 {
@@ -164,13 +164,14 @@
 
     .steps-intro-text {
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .steps-sticky-wrapper {
         position: sticky;
         top: 64px;
         height: calc(100vh - 64px);
-        max-width: 1200px;
+        max-width: 700px;
         margin: 0 auto;
         padding: 2rem;
     }
@@ -201,7 +202,7 @@
     .steps-display {
         display: block;
         position: absolute;
-        right: 2rem;
+        left: 15rem;
         top: 5vh;
         height: 85vh;
         width: 500px;
@@ -234,18 +235,18 @@
 
     /* step alignment */
     .step-content[data-step="1"] {
-        top: 11%;
+        top: 10%;
     }
 
     .step-content[data-step="2"] {
-        top: 39%;
+        top: 38%;
     }
 
     .step-content[data-step="3"] {
-        top: 67%;
+        top: 64%;
     }
 
     .step-content[data-step="4"] {
-        top: 93%;
+        top: 92%;
     }
 }
