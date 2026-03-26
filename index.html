@@ -14,7 +14,6 @@
 <body>
     <header>
         <div id="nav-placeholder"></div>
-        <!-- the black hole goes here -->
     </header>
     <main>
         <!-- Title screen -->
@@ -33,7 +32,7 @@
             <!-- title -->
             <!-- this gets sucked in -->
             <div class="pageTitle">
-                <h1 aria-hidden="true">
+                <h1>
                     <span>N</span>
                     <span>E</span>
                     <span>B</span>
@@ -97,7 +96,7 @@
                                 <div class="transform-container3">
                                     <div class="transform-container4">
                                         <!-- https://modelviewer.dev/ -->
-                                        <model-viewer alt="Nebula Xplorer Satellite" src="assets/models/module-1.glb" environment-image="neutral" camera-controls camera-target="0m 0m 0m" auto-rotate disable-zoom style="width: 100px;"></model-viewer>
+                                        <model-viewer alt="Nebula Xplorer Satellite 3d model" src="assets/models/module-1.glb" environment-image="neutral" camera-controls camera-target="0m 0m 0m" auto-rotate disable-zoom style="width: 100px;"></model-viewer>
                                     </div>
 
                                 </div>
@@ -130,96 +129,96 @@
                                 <img src="assets/images/satellite-bus-components-1.png" alt="">
                             </figure>
                             <div class="button-container">
-                                <button data-id="1" class="button1 active"></button>
-                                <button data-id="2" class="button2"></button>
-                                <button data-id="3" class="button3"></button>
-                                <button data-id="4" class="button4"></button>
-                                <button data-id="5" class="button5"></button>
-                                <button data-id="6" class="button6"></button>
-                                <button data-id="7" class="button7"></button>
-                                <button data-id="8" class="button8"></button>
-                                <button data-id="9" class="button9"></button>
-                                <button data-id="10" class="button10"></button>
-                                <button data-id="11" class="button11"></button>
-                                <button data-id="12" class="button12"></button>
-                                <button data-id="13" class="button13"></button>
-                                <button data-id="14" class="button14"></button>
-                                <button data-id="9" class="button15"></button>
+                                <button data-id="1" class="button1 active" aria-labelledby="part1"></button>
+                                <button data-id="2" class="button2" aria-labelledby="part2"></button>
+                                <button data-id="3" class="button3" aria-labelledby="part3"></button>
+                                <button data-id="4" class="button4" aria-labelledby="part4"></button>
+                                <button data-id="5" class="button5" aria-labelledby="part5"></button>
+                                <button data-id="6" class="button6" aria-labelledby="part6"></button>
+                                <button data-id="7" class="button7" aria-labelledby="part7"></button>
+                                <button data-id="8" class="button8" aria-labelledby="part8"></button>
+                                <button data-id="9" class="button9" aria-labelledby="part9"></button>
+                                <button data-id="10" class="button10" aria-labelledby="part10"></button>
+                                <button data-id="11" class="button11" aria-labelledby="part11"></button>
+                                <button data-id="12" class="button12" aria-labelledby="part12"></button>
+                                <button data-id="13" class="button13" aria-labelledby="part13"></button>
+                                <button data-id="14" class="button14" aria-labelledby="part14"></button>
+                                <button data-id="9" class="button15" aria-labelledby="part9"></button>
                             </div>
                         </div>
 
-                        <div class="satellite-parts">
-                            <div>
-                                <button data-id="1" class="button1">1</button>
+                        <ul class="satellite-parts">
+                            <li id="part1">
+                                <button data-id="1" aria-label="satellit onderdeel">1</button>
                                 <p>Inertial measurement units</p>
-                            </div>
+                            </li>
 
-                            <div>
-                                <button data-id="2" class="button2">2</button>
+                            <li id="part2">
+                                <button data-id="2" aria-label="satellit onderdeel">2</button>
                                 <p>Batteries</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="3" class="button3">3</button>
+                            <li id="part3">
+                                <button data-id="3" aria-label="satellit onderdeel">3</button>
                                 <p>Solar panels with drive mechanism</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="4" class="button4">4</button>
+                            <li id="part4">
+                                <button data-id="4" aria-label="satellit onderdeel">4</button>
                                 <p>Star trackers</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="5" class="button5">5</button>
+                            <li id="part5">
+                                <button data-id="5" aria-label="satellit onderdeel">5</button>
                                 <p>Transceivers</p>
-                            </div>
+                            </li>
 
-                            <div>
-                                <button data-id="6" class="button6">6</button>
+                            <li id="part6">
+                                <button data-id="6" aria-label="satellit onderdeel">6</button>
                                 <p>GNSS Receiver</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="7" class="button7">7</button>
+                            <li id="part7">
+                                <button data-id="7" aria-label="satellit onderdeel">7</button>
                                 <p>Sun sensors</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="8" class="button8">8</button>
+                            <li id="part8">
+                                <button data-id="8" aria-label="satellit onderdeel">8</button>
                                 <p>Magnetometers</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="9" class="button9">9</button>
+                            <li id="part9">
+                                <button data-id="9" aria-label="satellit onderdeel">9</button>
                                 <p>S-band antennas</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="10" class="button10">10</button>
+                            <li id="part10">
+                                <button data-id="10" aria-label="satellit onderdeel">10</button>
                                 <p>Magnetic torquers</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="11" class="button11">11</button>
+                            <li id="part11">
+                                <button data-id="11" aria-label="satellit onderdeel">11</button>
                                 <p>On-board computer</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="12" class="button12">12</button>
+                            <li id="part12">
+                                <button data-id="12" aria-label="satellit onderdeel">12</button>
                                 <p>Reaction wheels</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="13" class="button13">13</button>
+                            <li id="part13">
+                                <button data-id="13" aria-label="satellit onderdeel">13</button>
                                 <p>Seperation plate</p>
-                            </div>
+                            </li>
                             
-                            <div>
-                                <button data-id="14" class="button14">14</button>
+                            <li id="part14">
+                                <button data-id="14" aria-label="satellit onderdeel">14</button>
                                 <p>X-ray instrument</p>
-                            </div>
+                            </li>
                             
-                        </div>
+                        </ul>
 
 
                         
@@ -311,7 +310,8 @@
                 <div class="steps-display">
                     <div class="step-content active" data-step="1">
                         <h3>Reviews and Design Confirmation</h3>
-                        <p>Before production and launch, the project passes formal ECSS review stages. The System Requirements Review (SRR) defines and validates system needs. The Preliminary Design Review (PDR) evaluates the current design. Finally, the Critical Design Review (CDR) confirms readiness for manufacturing and verifies that all requirements are met.</p>                    </div>
+                        <p>Before production and launch, the project passes formal ECSS review stages. The System Requirements Review (SRR) defines and validates system needs. The Preliminary Design Review (PDR) evaluates the current design. Finally, the Critical Design Review (CDR) confirms readiness for manufacturing and verifies that all requirements are met.</p>                    
+                    </div>
                     <div class="step-content" data-step="2">
                         <h3>Testing and Qualification (V&V)</h3>
                         <p>Verification and Validation ensures that all systems perform correctly. The Engineering Model (EM) is used for functional testing, while the Proto Flight Model (PFM) undergoes strict qualification tests. Activities include COTS component testing, FPGA prototyping, and alignment of the Optical Bench Assembly to withstand launch conditions.</p>

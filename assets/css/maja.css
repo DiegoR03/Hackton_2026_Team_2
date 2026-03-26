@@ -539,6 +539,7 @@
     button:hover {
         background-color: #1ACB63;
     }
+
 }
 
 
@@ -555,7 +556,7 @@
     
    
 
-    >div {
+    >li {
 
         
         scroll-snap-align: center;
