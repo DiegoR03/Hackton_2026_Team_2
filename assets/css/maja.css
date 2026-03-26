@@ -33,7 +33,6 @@
     position: relative;
     width: 100vw;
     height: max-content;
-    background-color: var(--color-background);
     display: grid;
     place-items: center;
     align-items: center;
@@ -67,13 +66,14 @@
             border-radius: 99em;
             
             background: url("../images/world-map.png"),
-                        linear-gradient(var(--color-accent-blue), green, var(--color-accent-blue));
+                        linear-gradient(#0AA6D8, #1ACB63, #0AA6D8);
             
             background-size: 150%, cover; 
             background-repeat: repeat-x, no-repeat;
             background-position: center, center;
            
-            box-shadow: 0px 0px 40px 5px rgb(255, 237, 173);
+            box-shadow: 0 10px 40px rgba(8, 88, 235, 0.5);
+   
 
             @media (prefers-reduced-motion: no-preference) {
                 animation: move-background 10s linear infinite;
@@ -178,6 +178,8 @@
     display: grid;
     align-items: start;
     width: 100%;
+    max-width: 1000px;
+    justify-self: center;
     
 
     #satellite-step-container {
@@ -192,7 +194,7 @@
             
             padding: 0;
             list-style: none;
-            margin-bottom: 10rem;
+            margin-bottom: 0;
             display: grid;
             align-items: start;
             
@@ -204,12 +206,31 @@
             }
 
             &:first-of-type .text {
-                width: 60%;
-                margin-left: 2rem;
+                width: 65%;
+                padding-left: 2rem;
+                padding: 2rem 6rem 5rem 2rem;
+                
 
                 @media (max-width: 470px) {
                     width: 80%;
                 }
+
+                &:first-of-type {
+                    background-color: #EB5D33;
+                }
+            }
+
+            &:nth-of-type(2) .text  {
+                background-color: #D53F16;
+                padding: 2rem 2rem 5rem 6rem;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            h2{
+                color: white;
+                margin-bottom: 1rem;
             }
 
             figure {
@@ -236,27 +257,26 @@
 
     
     height: max-content;
-    grid-template-rows: max-content max-content 1fr;
-    grid-template-columns: 8fr 5fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr;
 
     .text {
-        max-height: max-content;
         justify-self: end;
         margin: 0 2rem 0 0;
         margin-left: 0;
 
-        grid-column: 2/3;
+        grid-column: 3/4;
         align-self: center;
         grid-row: 1/3;
     }
 
     .satellite-explanation-container {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-column: 1/3;
+        grid-row: 1/3;
     }
 
     .satellite-parts {
-        grid-column: 1/2;
+        grid-column: 1/3;
         justify-self: center;
         
     }
@@ -277,6 +297,7 @@
             }
         }
     }
+
 }
 
 @media (max-width: 690px) {
@@ -296,6 +317,7 @@
         .satellite-explanation-container {
             grid-column: 1/3;
             grid-row: 2/3;
+            
         }
 
         .satellite-parts {
@@ -305,19 +327,23 @@
 }
 
 @media (min-width: 800px) {
-    .satellite-step1 {
+    /* .satellite-step1 {
         grid-template-columns: 6fr 5fr;
 
         
-    } 
+    }  */
+
+    #satellite-steps #satellite-step-container article:first-of-type .text {
+        margin-left: 1.8rem;
+    }
 
 }
 
 @media (min-width: 830px) {
-    .satellite-step1 {
+    /* .satellite-step1 {
         grid-template-columns: 6fr 5fr;
         
-    } 
+    }  */
 
     #satellite-steps .satellite-explanation-container {
         width: 80%;
@@ -336,10 +362,7 @@
 }
 
 @media (min-width: 1000px) {
-    .satellite-step1 {
-        grid-template-columns: 4fr 5fr;
-        
-    } 
+    
 
     #satellite-steps .satellite-explanation-container {
         width: 80%;
@@ -496,23 +519,25 @@
 
 
 
+.satellite-step1 {
 
-
-button {
-  background: var(--accent-orange);
+    button {
+      background: var(--accent-orange);
+    }
+    
+    button.active {
+      background: #1ACB63;
+    }
+    
+    .button-container button.active {
+        background-color: #1ACB63;
+    }
+    
+    button:hover {
+        background-color: #1ACB63;
+    }
 }
 
-button.active {
-  background: green;
-}
-
-.button-container button.active {
-    background-color: green;
-}
-
-button:hover {
-    background-color: green;
-}
 
 
 .satellite-parts {
@@ -520,19 +545,28 @@ button:hover {
     gap: 2.5rem;
     
     height: 5rem;
-    overflow: scroll;
-    /* overflow: clip; */
+    overflow: hidden;
     
     justify-items: center;
+    position: relative;
     
    
 
-    div {
+    >div {
+
+        
         scroll-snap-align: center;
         container-type: scroll-state;
    
         display: flex;
         height: 5rem;
+        
+        
+
+        p {
+            color: white;
+        }
+        
         
 
         @supports (container-type: scroll-state) {
@@ -558,7 +592,7 @@ button:hover {
         align-self: center;
         
         &:first-of-type{
-            background: green;
+            background: #1ACB63;
         } 
     }
 }
@@ -713,10 +747,14 @@ button:hover {
 @media (min-width: 431px) {
     :root {
         --satellite-position-x: -40vw;
-        --satellite-position-y: 40vh;
+        --satellite-position-y: 50vh;
         --satellite-scale: 3;
 
         
+    }
+
+    .satellite-step1 {
+        grid-template-rows: 3fr 4fr 1fr;
     }
 
     #satellite-rotation #earth-container #earth {
@@ -726,6 +764,21 @@ button:hover {
     #satellite-rotation #satellite-steps #satellite-step-container .satellite-step0 .text {
         width: 80%;
     }
+    #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {
+        width: 100%;
+        height: 100%;
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
+    .satellite-step1 .satellite-explanation-container, .satellite-step1 .satellite-parts {
+        grid-column: 1/4;
+    }
+
+    .satellite-step1 .satellite-parts {
+        grid-row: 3/4;
+    }
+    
 }
 
 
@@ -739,7 +792,7 @@ button:hover {
     }
 
     #satellite-rotation #earth-container #earth {
-        --earth-margin-bottom: calc(var(--earth-width)*2);
+        --earth-margin-bottom: calc(var(--earth-width)*1.5);
     }
 }
 
@@ -750,12 +803,34 @@ button:hover {
         --satellite-scale: 4;
     }
 
+    .satellite-step1 {
+        grid-template-rows: 4fr 1fr;
+    }
+
     #satellite-rotation #satellite-steps #satellite-step-container .satellite-step0 .text {
-        width: 60%;
+        width: 65%;
     }
 
     #satellite-rotation #earth-container #earth {
         --earth-margin-bottom: calc(var(--earth-width)*0.5);
+    }
+
+    #satellite-rotation #satellite-steps #satellite-step-container .satellite-step1 .text {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .satellite-step1 .satellite-explanation-container {
+        grid-column: 1/3;
+        align-self: center;
+        grid-row: 1/2;
+    }
+
+    .satellite-step1 .satellite-parts {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        position: relative;
     }
 }
 
@@ -770,8 +845,8 @@ button:hover {
 
 @media (min-width: 800px) {
     :root {
-        --satellite-position-x: -15vw;
-        --satellite-position-y: 70vh;
+        --satellite-position-x: -13vw;
+        --satellite-position-y: 72vh;
         --satellite-scale: 4;
     }
 }
@@ -788,7 +863,7 @@ button:hover {
 
 @media (min-width: 1100px) {
     :root {
-        --satellite-position-x: -5vw;
+        --satellite-position-x: 0vw;
         --satellite-position-y: 70vh;
 
         --satellite-scale: 5;
@@ -819,3 +894,4 @@ button:hover {
     }
 
 }
+
