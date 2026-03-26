@@ -22,10 +22,12 @@ function createNebulaGradient() {
 
 function applyNebula() {
     const nebulaGradient = createNebulaGradient();
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('body');
 
     sections.forEach((section, index) => {
-        if (index === 1) return;
+        if (section.id === 'info') {
+            return; 
+        }
         
         section.style.backgroundImage = nebulaGradient;
         section.style.backgroundAttachment = 'fixed';

@@ -18,7 +18,7 @@ div#earthLocaties-container {
     left: -10%;
     width: 100vw;
     height: 100vw;
-    z-index: -1;
+    z-index: 2;
 }
 
 /* Astronaut section */
@@ -29,7 +29,7 @@ div#earthLocaties-container {
     align-items: center;
     position: relative;
     overflow: clip;
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
 
     ul {
         height: 100%;
@@ -66,6 +66,7 @@ div#earthLocaties-container {
     --astronaut-scroll-offset: 0px;
     animation: astronaut-float 10s infinite  alternate ease-in-out;
     box-sizing:inherit;
+    z-index: 3;
 }
 
 /* Astronaut-2 */
@@ -97,6 +98,7 @@ div#earthLocaties-container {
     text-align: center;
     translate: 0rem 6rem;
     margin-bottom: 2rem;
+    z-index: 4;
 
     > h2 {
         font-size: 2em;
@@ -108,13 +110,13 @@ div#earthLocaties-container {
         color: #EB5D34;
         text-transform: uppercase;
         margin-top:.3rem;
-        font-family: 'SpaceMonoRegular';
+        font-family: var(--font-mono);
     }
 
     p {
         color: white;
         margin: 0;
-        font-family: 'SpaceMonoregular';
+        font-family: var(--font-mono);
         font-size: .9em;
         margin-left: 1rem;
         margin-right: 1rem;
@@ -153,11 +155,13 @@ div#earthLocaties-container {
 
 /* sponsors section */
 section.team-sponsors {
-    width: 95vw;
+    width: 100vw;
     min-height: 0;
     height: auto;
     justify-self: center;
-    padding: 0rem;
+    padding-bottom: 6rem;
+    z-index: 5;
+    background-color: transparent;
 
     figure {
         width: 85%;
@@ -182,7 +186,7 @@ section.team-sponsors {
 }
 
 .sponsor-list {
-    padding: 0;
+    padding: 4rem;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(250px , 1fr));
@@ -197,16 +201,19 @@ section.team-sponsors {
 }
 
 .sponsor-title {
-    font-family: 'SpaceMonoRegular';
-    font-size: 1.5em;
-    color: #EB5D34;
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    border-bottom: 3px solid #EB5D34;
+    color: var(--text-white);
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; 
+    width: 30vw;
+    justify-self: center;
 }
 
 .sponsor-name   {
     text-align: start;
-    font-family: 'SpaceMonoRegular';
+    font-family: var(--font-mono);
 }
 
 .team-sponsor-1-text-container {

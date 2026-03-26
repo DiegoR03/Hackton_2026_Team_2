@@ -15,7 +15,7 @@ function createGlobalStarField() {
         width: 100vw;
         height: 100vh;
         pointer-events: none;
-        z-index: -1;
+        z-index: 1;
     `;
 
     document.body.prepend(canvas);

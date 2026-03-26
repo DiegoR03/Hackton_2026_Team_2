@@ -8,6 +8,7 @@ footer {
     position: relative;
     gap: 1rem;
     width: 100vw;
+    z-index: 6;
 
     div p{
         font-size: 4vh;
@@ -128,7 +129,7 @@ footer {
     background-size: 80px 50px;
     background-repeat: repeat-x;
     background-position: top center;
-    z-index: 2;
+    z-index: 6;
     }
 }
 
