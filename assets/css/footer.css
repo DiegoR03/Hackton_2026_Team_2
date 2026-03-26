@@ -44,7 +44,7 @@ footer {
     #footer-menu{
         grid-row: 1;
         grid-column: 2;
-        padding: 2rem;
+        padding: 3rem;
     }
 
     #footer-menu-lists{
