@@ -28,6 +28,9 @@ buttons.forEach(button => {
 
 
 
+
+// satellite parts explanation scroll
+
 const satelliteButtons = document.querySelectorAll('.button-container button');
 
 satelliteButtons.forEach(button => {
@@ -46,10 +49,6 @@ satelliteButtons.forEach(button => {
       block: 'end'
     });
   };
-
-  window.scrollTo({
-
-  })
 
 
   button.addEventListener('mouseenter', activate);
