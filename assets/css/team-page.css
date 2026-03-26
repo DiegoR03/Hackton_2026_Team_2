@@ -63,6 +63,7 @@ div#earthLocaties-container {
 /* astronaut floating animatino */
 .team-astronaut-1, .team-astronaut-2, .team-astronaut-3 {
     translate: 11.5rem -18rem;
+    --astronaut-scroll-offset: 0px;
     animation: astronaut-float 10s infinite  alternate ease-in-out;
     box-sizing:inherit;
 }
@@ -121,10 +122,23 @@ div#earthLocaties-container {
 }
 
 .atronaut-button {
-    background-color: #EB5D34;
+    content: "";
+    background-color: transparent;
     border: none;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: 1;
+}
+
+.atronaut-button::before {
+    content: "";
+    display: block;
     width: 2rem;
     height: 2rem;
+    background-color: #EB5D34;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 30% 100%, 80% 50%, 30% 0);
     position: absolute;
     right: 5%;
@@ -213,13 +227,31 @@ section.team-sponsors {
 /* keyframes */
 @keyframes astronaut-float {
     0% {
-        transform: translateY(2rem) translateX(0rem) scale(0.8) rotateY(0deg) rotateX(0deg) rotate(0deg);
+        transform:
+            translateY(calc(2rem - var(--astronaut-scroll-offset)))
+            translateX(0rem)
+            scale(0.8)
+            rotateY(0deg)
+            rotateX(0deg)
+            rotate(0deg);
     }
     50% {
-        transform: translateY(-2rem) translateX(1.5rem) scale(0.8) rotateY(3deg) rotateX(3deg) rotate(0deg);
+        transform:
+            translateY(calc(-2rem - var(--astronaut-scroll-offset))) 
+            translateX(1.5rem)
+            scale(0.8) 
+            rotateY(3deg) 
+            rotateX(3deg) 
+            rotate(0deg);
     }
     100% {
-        transform: translateY(-1rem) translateX(1.5rem) scale(0.8) rotateY(3deg) rotateX(3deg) rotate(5deg);
+        transform:
+            translateY(calc(-1rem - var(--astronaut-scroll-offset))) 
+            translateX(1.5rem) 
+            scale(0.8) 
+            rotateY(3deg)
+            rotateX(3deg)
+            rotate(5deg);
     }
 }
 
@@ -276,13 +308,31 @@ section.team-sponsors {
 
     @keyframes astronaut-float {
         0% {
-            transform: translateY(2rem) translateX(0rem) scale(0.9) rotateY(0deg) rotateX(0deg) rotate(0deg);
+            transform:
+                translateY(calc(2rem - var(--astronaut-scroll-offset)))
+                translateX(0rem)
+                scale(0.9)
+                rotateY(0deg)
+                rotateX(0deg)
+                rotate(0deg);
         }
         50% {
-            transform: translateY(-2rem) translateX(1.5rem) scale(0.9) rotateY(3deg) rotateX(3deg) rotate(0deg);
+            transform:
+                translateY(calc(-2rem - var(--astronaut-scroll-offset))) 
+                translateX(1.5rem)
+                scale(0.9) 
+                rotateY(3deg) 
+                rotateX(3deg) 
+                rotate(0deg);
         }
         100% {
-            transform: translateY(-1rem) translateX(1.5rem) scale(0.9) rotateY(3deg) rotateX(3deg) rotate(5deg);
+            transform:
+                translateY(calc(-1rem - var(--astronaut-scroll-offset))) 
+                translateX(1.5rem) 
+                scale(0.9) 
+                rotateY(3deg)
+                rotateX(3deg)
+                rotate(5deg);
         }
     }
 }
@@ -317,13 +367,31 @@ section.team-sponsors {
 
     @keyframes astronaut-float {
         0% {
-            transform: translateY(2rem) translateX(0rem) scale(1) rotateY(0deg) rotateX(0deg) rotate(0deg);
+            transform:
+                translateY(calc(2rem - var(--astronaut-scroll-offset)))
+                translateX(0rem)
+                scale(1)
+                rotateY(0deg)
+                rotateX(0deg)
+                rotate(0deg);
         }
         50% {
-            transform: translateY(-2rem) translateX(1.5rem) scale(1) rotateY(3deg) rotateX(3deg) rotate(0deg);
+            transform:
+                translateY(calc(-2rem - var(--astronaut-scroll-offset))) 
+                translateX(1.5rem)
+                scale(1) 
+                rotateY(3deg) 
+                rotateX(3deg) 
+                rotate(0deg);
         }
         100% {
-            transform: translateY(-1rem) translateX(1.5rem) scale(1) rotateY(3deg) rotateX(3deg) rotate(5deg);
+            transform:
+                translateY(calc(-1rem - var(--astronaut-scroll-offset))) 
+                translateX(1.5rem) 
+                scale(1) 
+                rotateY(3deg)
+                rotateX(3deg)
+                rotate(5deg);
         }
     }
 }
