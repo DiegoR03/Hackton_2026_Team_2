@@ -204,6 +204,7 @@
     }
 }
 
+
 @media screen and (min-width: 768px) {
     body::before {
         content: '';
@@ -215,5 +216,9 @@
         background-color: var(--accent-orange, #EB5D34);
         z-index: 9999;
         pointer-events: none;
+    }
+
+    .nav-logo img {
+    margin-left: 2rem;
     }
 }
